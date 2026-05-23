@@ -131,6 +131,11 @@ async function main() {
 
     // ── 3a. Proses Simpanan Wajib ──────────────────────────
     const wajib = anggota.simpanan_wajib || {};
+    
+    // Hapus data simpanan wajib lama agar tidak ada duplikasi jika dijalankan ulang
+    await prisma.mandatorySaving.deleteMany({ where: { userId: user.id } });
+    await prisma.payment.deleteMany({ where: { userId: user.id, description: 'Simpanan Wajib' } });
+
     let userWajibTotal = 0;
 
     for (const yearStr of Object.keys(wajib)) {
