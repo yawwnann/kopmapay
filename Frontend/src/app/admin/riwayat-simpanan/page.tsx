@@ -25,6 +25,7 @@ import {
   Landmark,
   FileText,
   ArrowUpCircle,
+  ArrowDownCircle,
   RefreshCw,
   History,
 } from "lucide-react";
@@ -197,11 +198,20 @@ function RiwayatSimpananContent() {
 
   const grandTotal = wajibTotal + sukarelaTotal;
 
-  // ─── Derived: paginated voluntary ─────────────────────
-  const totalVoluntaryPages = Math.ceil(voluntarySavings.length / itemsPerPage);
+  // ─── Derived: paginated voluntary with saldo ──────────
+  const voluntaryWithSaldo = useMemo(() => {
+    let currentBalance = sukarelaTotal;
+    return voluntarySavings.map(vs => {
+      const saldo = currentBalance;
+      currentBalance -= vs.nominal;
+      return { ...vs, saldo };
+    });
+  }, [voluntarySavings, sukarelaTotal]);
+
+  const totalVoluntaryPages = Math.ceil(voluntaryWithSaldo.length / itemsPerPage);
   const paginatedVoluntary = useMemo(
-    () => voluntarySavings.slice((page - 1) * itemsPerPage, page * itemsPerPage),
-    [voluntarySavings, page]
+    () => voluntaryWithSaldo.slice((page - 1) * itemsPerPage, page * itemsPerPage),
+    [voluntaryWithSaldo, page]
   );
 
   // ─── Derived: current year overview ──────────────────
@@ -724,6 +734,9 @@ function RiwayatSimpananContent() {
                         <th className="px-4 py-3 text-left text-[11px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
                           Keterangan
                         </th>
+                        <th className="px-4 py-3 text-right text-[11px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                          Saldo
+                        </th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-stroke dark:divide-strokedark">
@@ -743,16 +756,28 @@ function RiwayatSimpananContent() {
                             </div>
                           </td>
                           <td className="px-4 py-3 text-right text-sm font-semibold text-dark dark:text-white">
-                            {formatCurrency(vs.nominal)}
+                            <span className={vs.nominal < 0 ? "text-red-500" : "text-green-500"}>
+                              {vs.nominal < 0 ? "- " : "+ "}{formatCurrency(Math.abs(vs.nominal))}
+                            </span>
                           </td>
                           <td className="px-4 py-3 text-right">
-                            <span className="inline-flex items-center gap-1 rounded-full bg-green-50 px-2.5 py-1 text-[11px] font-semibold text-green-600 ring-1 ring-inset ring-green-200 dark:bg-green-900/30 dark:text-green-400 dark:ring-green-800">
-                              <ArrowUpCircle className="h-3 w-3" />
-                              Sukarela
-                            </span>
+                            {vs.nominal < 0 ? (
+                              <span className="inline-flex items-center gap-1 rounded-full bg-red-50 px-2.5 py-1 text-[11px] font-semibold text-red-600 ring-1 ring-inset ring-red-200 dark:bg-red-900/30 dark:text-red-400 dark:ring-red-800">
+                                <ArrowDownCircle className="h-3 w-3" />
+                                Penarikan
+                              </span>
+                            ) : (
+                              <span className="inline-flex items-center gap-1 rounded-full bg-green-50 px-2.5 py-1 text-[11px] font-semibold text-green-600 ring-1 ring-inset ring-green-200 dark:bg-green-900/30 dark:text-green-400 dark:ring-green-800">
+                                <ArrowUpCircle className="h-3 w-3" />
+                                Simpanan
+                              </span>
+                            )}
                           </td>
                           <td className="px-4 py-3 text-sm text-gray-500 dark:text-gray-400">
                             {vs.payment?.paymentMethod || "—"}
+                          </td>
+                          <td className="px-4 py-3 text-right text-sm font-bold text-dark dark:text-white">
+                            {formatCurrency(vs.saldo)}
                           </td>
                         </tr>
                       ))}
@@ -767,7 +792,7 @@ function RiwayatSimpananContent() {
                           Total Sukarela
                         </td>
                         <td
-                          colSpan={3}
+                          colSpan={4}
                           className="px-4 py-3 text-right text-sm font-bold text-green-600 dark:text-green-400"
                         >
                           {formatCurrency(sukarelaTotal)}

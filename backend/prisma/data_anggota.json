@@ -770,7 +770,7 @@
       },
       {
         "tanggal": "12/11/2025",
-        "nominal": 1000000,
+        "nominal": -1000000,
         "saldo": 135000
       },
       {
@@ -2883,267 +2883,6 @@
         "tanggal": "04/02/2026",
         "nominal": 11419,
         "saldo": 11419
-      }
-    ]
-  },
-  {
-    "nama": "Dhifa khairani Sinaga",
-    "nim": "2300011115",
-    "prodi": "Manajemen / ekonomi dan bisnis",
-    "no_hp": "‪+62 831‑6738‑1594‬",
-    "simpanan_wajib": {
-      "2023": {
-        "Oktober": {
-          "tanggal_bayar": "14/10/2023",
-          "nominal": 10000
-        },
-        "November": {
-          "tanggal_bayar": "23/03/2024",
-          "nominal": 10000
-        },
-        "Desember": {
-          "tanggal_bayar": "23/03/2024",
-          "nominal": 10000
-        }
-      },
-      "2024": {
-        "Januari": {
-          "tanggal_bayar": "23/03/2024",
-          "nominal": 10000
-        },
-        "Februari": {
-          "tanggal_bayar": "23/03/2024",
-          "nominal": 10000
-        },
-        "Maret": {
-          "tanggal_bayar": "23/03/2024",
-          "nominal": 10000
-        },
-        "April": {
-          "tanggal_bayar": "20/11/2024",
-          "nominal": 10000
-        },
-        "Mei": {
-          "tanggal_bayar": "20/11/2024",
-          "nominal": 10000
-        },
-        "Juni": {
-          "tanggal_bayar": "17/05/2025",
-          "nominal": 10000
-        },
-        "Juli": {
-          "tanggal_bayar": "17/05/2025",
-          "nominal": 10000
-        },
-        "Agustus": {
-          "tanggal_bayar": "17/05/2025",
-          "nominal": 10000
-        },
-        "September": {
-          "tanggal_bayar": "17/05/2025",
-          "nominal": 10000
-        },
-        "Oktober": {
-          "tanggal_bayar": "17/05/2025",
-          "nominal": 10000
-        },
-        "November": {
-          "tanggal_bayar": "17/05/2025",
-          "nominal": 10000
-        },
-        "Desember": {
-          "tanggal_bayar": "17/05/2025",
-          "nominal": 10000
-        }
-      },
-      "2025": {
-        "Januari": {
-          "tanggal_bayar": "17/05/2025",
-          "nominal": 10000
-        },
-        "Februari": {
-          "tanggal_bayar": "17/05/2025",
-          "nominal": 10000
-        },
-        "Maret": {
-          "tanggal_bayar": "17/05/2025",
-          "nominal": 10000
-        },
-        "April": {
-          "tanggal_bayar": "23/05/2025",
-          "nominal": 10000
-        },
-        "Mei": {
-          "tanggal_bayar": "13/07/2025",
-          "nominal": 10000
-        },
-        "Juni": {
-          "tanggal_bayar": "13/07/2025",
-          "nominal": 10000
-        },
-        "Juli": {
-          "tanggal_bayar": "02/10/2025",
-          "nominal": 10000
-        },
-        "Agustus": {
-          "tanggal_bayar": "02/10/2025",
-          "nominal": 10000
-        },
-        "September": {
-          "tanggal_bayar": "02/10/2025",
-          "nominal": 10000
-        },
-        "Oktober": {
-          "tanggal_bayar": "02/10/2025",
-          "nominal": 10000
-        },
-        "November": {
-          "tanggal_bayar": "02/10/2025",
-          "nominal": 10000
-        },
-        "Desember": {
-          "tanggal_bayar": "28/02/2026",
-          "nominal": 10000
-        }
-      },
-      "2026": {
-        "Januari": {
-          "tanggal_bayar": "28/02/2026",
-          "nominal": 10000
-        },
-        "Februari": {
-          "tanggal_bayar": "28/02/2026",
-          "nominal": 10000
-        }
-      }
-    },
-    "simpanan_sukarela": []
-  },
-  {
-    "nama": "Dwi Agnestya indriyanti",
-    "nim": "2300011072",
-    "prodi": "manajemen fakultas FEB",
-    "no_hp": "82136998455",
-    "simpanan_wajib": {
-      "2023": {
-        "Oktober": {
-          "tanggal_bayar": "14/10/2023",
-          "nominal": 10000
-        },
-        "November": {
-          "tanggal_bayar": "02/09/2024",
-          "nominal": 10000
-        },
-        "Desember": {
-          "tanggal_bayar": "02/09/2024",
-          "nominal": 10000
-        }
-      },
-      "2024": {
-        "Januari": {
-          "tanggal_bayar": "02/09/2024",
-          "nominal": 10000
-        },
-        "Februari": {
-          "tanggal_bayar": "02/09/2024",
-          "nominal": 10000
-        },
-        "Maret": {
-          "tanggal_bayar": "02/09/2024",
-          "nominal": 10000
-        },
-        "April": {
-          "tanggal_bayar": "02/09/2024",
-          "nominal": 10000
-        },
-        "Mei": {
-          "tanggal_bayar": "02/09/2024",
-          "nominal": 10000
-        },
-        "Juni": {
-          "tanggal_bayar": "02/09/2024",
-          "nominal": 10000
-        },
-        "Juli": {
-          "tanggal_bayar": "02/09/2024",
-          "nominal": 10000
-        },
-        "Agustus": {
-          "tanggal_bayar": "02/09/2024",
-          "nominal": 10000
-        },
-        "September": {
-          "tanggal_bayar": "02/09/2024",
-          "nominal": 10000
-        },
-        "Oktober": {
-          "tanggal_bayar": "02/09/2024",
-          "nominal": 10000
-        },
-        "November": {
-          "tanggal_bayar": "03/05/2025",
-          "nominal": 10000
-        },
-        "Desember": {
-          "tanggal_bayar": "03/05/2025",
-          "nominal": 10000
-        }
-      },
-      "2025": {
-        "Januari": {
-          "tanggal_bayar": "03/05/2025",
-          "nominal": 10000
-        },
-        "Februari": {
-          "tanggal_bayar": "03/05/2025",
-          "nominal": 10000
-        },
-        "Maret": {
-          "tanggal_bayar": "03/05/2025",
-          "nominal": 10000
-        },
-        "April": {
-          "tanggal_bayar": "03/05/2025",
-          "nominal": 10000
-        },
-        "Mei": {
-          "tanggal_bayar": "03/05/2025",
-          "nominal": 10000
-        },
-        "Juni": {
-          "tanggal_bayar": "03/05/2025",
-          "nominal": 10000
-        },
-        "Juli": {
-          "tanggal_bayar": "03/05/2025",
-          "nominal": 10000
-        },
-        "Agustus": {
-          "tanggal_bayar": "03/05/2025",
-          "nominal": 10000
-        },
-        "September": {
-          "tanggal_bayar": "29/10/2025",
-          "nominal": 10000
-        }
-      },
-      "2026": {}
-    },
-    "simpanan_sukarela": [
-      {
-        "tanggal": "30/10/2025",
-        "nominal": 100000,
-        "saldo": 100000
-      },
-      {
-        "tanggal": "05/11/2025",
-        "nominal": 100000,
-        "saldo": 0
-      },
-      {
-        "tanggal": "04/02/2026",
-        "nominal": 21031,
-        "saldo": 21031
       }
     ]
   },
@@ -5372,7 +5111,7 @@
       },
       {
         "tanggal": "25/04/2025",
-        "nominal": 300000,
+        "nominal": -300000,
         "saldo": 240000
       },
       {
@@ -5382,7 +5121,7 @@
       },
       {
         "tanggal": "25/06/2025",
-        "nominal": 150000,
+        "nominal": -150000,
         "saldo": 150000
       },
       {
@@ -5392,12 +5131,12 @@
       },
       {
         "tanggal": "25/08/2025",
-        "nominal": 102500,
+        "nominal": -102500,
         "saldo": 127500
       },
       {
         "tanggal": "19/09/2025",
-        "nominal": 127500,
+        "nominal": -127500,
         "saldo": 0
       },
       {
@@ -9310,12 +9049,12 @@
       },
       {
         "tanggal": "22/07/2025",
-        "nominal": 202500,
+        "nominal": -202500,
         "saldo": 1296000
       },
       {
         "tanggal": "19/08/2025",
-        "nominal": 1202500,
+        "nominal": -1202500,
         "saldo": 93500
       },
       {
