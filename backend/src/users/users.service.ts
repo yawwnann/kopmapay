@@ -80,6 +80,9 @@ export class UsersService {
 
   async findAll() {
     const users = await this.prisma.user.findMany({
+      where: {
+        role: 'ANGGOTA',
+      },
       select: {
         id: true,
         name: true,

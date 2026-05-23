@@ -228,6 +228,7 @@ export class DashboardService {
     // Fetch all data in parallel
     const [users, payments, withdrawals, savings] = await Promise.all([
       this.prisma.user.findMany({
+        where: { role: 'ANGGOTA' },
         select: {
           id: true,
           name: true,

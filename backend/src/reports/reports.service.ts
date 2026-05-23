@@ -98,7 +98,10 @@ export class ReportsService {
   }
 
   async getAngkatanReport(angkatan?: string) {
-    const whereClause = angkatan ? { angkatan } : {};
+    const whereClause: any = { role: 'ANGGOTA' };
+    if (angkatan) {
+      whereClause.angkatan = angkatan;
+    }
 
     // Get all users grouped by angkatan
     const users = await this.prisma.user.findMany({
