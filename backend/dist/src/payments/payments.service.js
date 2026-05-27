@@ -137,76 +137,79 @@ let PaymentsService = class PaymentsService {
         if (payment.status !== 'PENDING') {
             throw new common_1.BadRequestException(`Payment has already been processed (current status: ${payment.status})`);
         }
-        const updatedPayment = await this.prisma.payment.update({
-            where: { id: paymentId },
-            data: {
-                status: approvePaymentDto.status,
-                verifiedBy: adminId,
-                verifiedAt: new Date(),
-            },
-            include: {
-                user: {
-                    select: {
-                        id: true,
-                        name: true,
-                        email: true,
-                    },
+        const updatedPayment = await this.prisma.$transaction(async (tx) => {
+            const updated = await tx.payment.update({
+                where: { id: paymentId },
+                data: {
+                    status: approvePaymentDto.status,
+                    verifiedBy: adminId,
+                    verifiedAt: new Date(),
                 },
-            },
-        });
-        if (approvePaymentDto.status === 'APPROVED') {
-            await this.prisma.saving.upsert({
-                where: { userId: payment.userId },
-                update: {
-                    total: {
-                        increment: payment.nominal,
-                    },
-                },
-                create: {
-                    userId: payment.userId,
-                    total: payment.nominal,
-                },
-            });
-            const desc = (payment.description || '').toLowerCase();
-            const paymentDate = new Date(payment.createdAt);
-            const month = paymentDate.getMonth() + 1;
-            const year = paymentDate.getFullYear();
-            if (desc.includes('wajib')) {
-                await this.prisma.mandatorySaving.upsert({
-                    where: {
-                        userId_month_year: {
-                            userId: payment.userId,
-                            month,
-                            year,
+                include: {
+                    user: {
+                        select: {
+                            id: true,
+                            name: true,
+                            email: true,
                         },
                     },
+                },
+            });
+            if (approvePaymentDto.status === 'APPROVED') {
+                await tx.saving.upsert({
+                    where: { userId: payment.userId },
                     update: {
-                        nominal: payment.nominal,
-                        status: 'PAID',
-                        paidAt: new Date(),
-                        paymentId: payment.id,
+                        total: {
+                            increment: payment.nominal,
+                        },
                     },
                     create: {
                         userId: payment.userId,
-                        month,
-                        year,
-                        nominal: payment.nominal,
-                        status: 'PAID',
-                        paidAt: new Date(),
-                        paymentId: payment.id,
+                        total: payment.nominal,
                     },
                 });
+                const desc = (payment.description || '').toLowerCase();
+                const paymentDate = new Date(payment.createdAt);
+                const month = paymentDate.getMonth() + 1;
+                const year = paymentDate.getFullYear();
+                if (desc.includes('wajib')) {
+                    await tx.mandatorySaving.upsert({
+                        where: {
+                            userId_month_year: {
+                                userId: payment.userId,
+                                month,
+                                year,
+                            },
+                        },
+                        update: {
+                            nominal: payment.nominal,
+                            status: 'PAID',
+                            paidAt: new Date(),
+                            paymentId: payment.id,
+                        },
+                        create: {
+                            userId: payment.userId,
+                            month,
+                            year,
+                            nominal: payment.nominal,
+                            status: 'PAID',
+                            paidAt: new Date(),
+                            paymentId: payment.id,
+                        },
+                    });
+                }
+                else if (!desc.includes('pokok')) {
+                    await tx.voluntarySaving.create({
+                        data: {
+                            userId: payment.userId,
+                            nominal: payment.nominal,
+                            paymentId: payment.id,
+                        },
+                    });
+                }
             }
-            else if (!desc.includes('pokok')) {
-                await this.prisma.voluntarySaving.create({
-                    data: {
-                        userId: payment.userId,
-                        nominal: payment.nominal,
-                        paymentId: payment.id,
-                    },
-                });
-            }
-        }
+            return updated;
+        }, { timeout: 10000 });
         this.notificationsGateway.broadcastPaymentUpdate(updatedPayment.userId, {
             id: updatedPayment.id,
             userName: updatedPayment.user.name,
@@ -223,7 +226,7 @@ let PaymentsService = class PaymentsService {
         await this.emailService.sendPaymentNotification(updatedPayment.user.email, updatedPayment.user.name, Number(updatedPayment.nominal), updatedPayment.status);
         return updatedPayment;
     }
-    async findOne(id) {
+    async findOne(id, userId, role) {
         const payment = await this.prisma.payment.findUnique({
             where: { id },
             include: {
@@ -238,6 +241,9 @@ let PaymentsService = class PaymentsService {
             },
         });
         if (!payment) {
+            throw new common_1.NotFoundException('Payment not found');
+        }
+        if (role !== 'ADMIN' && payment.userId !== userId) {
             throw new common_1.NotFoundException('Payment not found');
         }
         return payment;

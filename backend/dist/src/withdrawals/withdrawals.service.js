@@ -37,6 +37,12 @@ let WithdrawalsService = class WithdrawalsService {
         if (saving.total.lessThan(new client_1.Prisma.Decimal(createWithdrawalDto.nominal))) {
             throw new common_1.BadRequestException('Insufficient balance');
         }
+        const existingPendingWithdrawal = await this.prisma.withdrawal.findFirst({
+            where: { userId, status: 'PENDING' },
+        });
+        if (existingPendingWithdrawal) {
+            throw new common_1.BadRequestException('Anda masih memiliki penarikan yang menunggu verifikasi. Silakan tunggu admin memproses penarikan Anda sebelum mengajukan penarikan baru.');
+        }
         const approvedPayments = await this.prisma.payment.findMany({
             where: { userId, status: 'APPROVED' },
             select: { nominal: true, description: true },
@@ -65,7 +71,18 @@ let WithdrawalsService = class WithdrawalsService {
         });
         approvedWithdrawals.forEach((withdrawal) => {
             const amount = Number(withdrawal.nominal);
-            breakdown[withdrawal.savingType] -= amount;
+            const type = withdrawal.savingType;
+            if (type === 'Semua') {
+                const currentTotal = breakdown.Pokok + breakdown.Wajib + breakdown.Sukarela;
+                if (currentTotal > 0) {
+                    breakdown.Pokok -= Math.round((amount * breakdown.Pokok) / currentTotal);
+                    breakdown.Wajib -= Math.round((amount * breakdown.Wajib) / currentTotal);
+                    breakdown.Sukarela -= Math.round((amount * breakdown.Sukarela) / currentTotal);
+                }
+            }
+            else if (breakdown[type] !== undefined) {
+                breakdown[type] -= amount;
+            }
         });
         const requestedAmount = createWithdrawalDto.nominal;
         const availableBalance = breakdown[createWithdrawalDto.savingType];
@@ -110,7 +127,7 @@ let WithdrawalsService = class WithdrawalsService {
             select: { email: true },
         });
         for (const admin of admins) {
-            this.emailService.sendAdminWithdrawalNotification(admin.email, withdrawal.user.name, Number(withdrawal.nominal));
+            await this.emailService.sendAdminWithdrawalNotification(admin.email, withdrawal.user.name, Number(withdrawal.nominal));
         }
         return withdrawal;
     }
@@ -230,7 +247,7 @@ let WithdrawalsService = class WithdrawalsService {
         this.emailService.sendWithdrawalNotification(withdrawal.user.email, withdrawal.user.name, Number(updatedWithdrawal.nominal), updatedWithdrawal.status);
         return updatedWithdrawal;
     }
-    async findOne(id) {
+    async findOne(id, userId, role) {
         const withdrawal = await this.prisma.withdrawal.findUnique({
             where: { id },
             include: {
@@ -247,6 +264,9 @@ let WithdrawalsService = class WithdrawalsService {
         if (!withdrawal) {
             throw new common_1.NotFoundException('Withdrawal not found');
         }
+        if (role !== 'ADMIN' && withdrawal.userId !== userId) {
+            throw new common_1.NotFoundException('Withdrawal not found');
+        }
         return withdrawal;
     }
     async withdrawAll(userId, reason, paymentMethod) {
@@ -255,6 +275,12 @@ let WithdrawalsService = class WithdrawalsService {
         });
         if (!saving || saving.total.equals(0)) {
             throw new common_1.BadRequestException('No balance available to withdraw');
+        }
+        const existingPendingWithdrawal = await this.prisma.withdrawal.findFirst({
+            where: { userId, status: 'PENDING' },
+        });
+        if (existingPendingWithdrawal) {
+            throw new common_1.BadRequestException('Anda masih memiliki penarikan yang menunggu verifikasi. Silakan tunggu admin memproses penarikan Anda sebelum mengajukan penarikan baru.');
         }
         const approvedPayments = await this.prisma.payment.findMany({
             where: { userId, status: 'APPROVED' },
@@ -277,8 +303,17 @@ let WithdrawalsService = class WithdrawalsService {
         });
         approvedWithdrawals.forEach((w) => {
             const amount = Number(w.nominal);
-            if (breakdown[w.savingType] !== undefined) {
-                breakdown[w.savingType] -= amount;
+            const type = w.savingType;
+            if (type === 'Semua') {
+                const currentTotal = breakdown.Pokok + breakdown.Wajib + breakdown.Sukarela;
+                if (currentTotal > 0) {
+                    breakdown.Pokok -= Math.round((amount * breakdown.Pokok) / currentTotal);
+                    breakdown.Wajib -= Math.round((amount * breakdown.Wajib) / currentTotal);
+                    breakdown.Sukarela -= Math.round((amount * breakdown.Sukarela) / currentTotal);
+                }
+            }
+            else if (breakdown[type] !== undefined) {
+                breakdown[type] -= amount;
             }
         });
         const totalAmount = Number(saving.total);

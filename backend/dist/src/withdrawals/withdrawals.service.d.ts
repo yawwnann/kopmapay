@@ -71,7 +71,7 @@ export declare class WithdrawalsService {
         savingType: import("@prisma/client").$Enums.SavingType;
         rejectionReason: string | null;
     }>;
-    findOne(id: string): Promise<{
+    findOne(id: string, userId?: string, role?: string): Promise<{
         user: {
             email: string;
             id: string;

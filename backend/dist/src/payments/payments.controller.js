@@ -42,8 +42,8 @@ let PaymentsController = class PaymentsController {
     findAll(req, userId, startDate, endDate, status) {
         return this.paymentsService.findAll(req.user.role, req.user.sub, userId, startDate, endDate, status);
     }
-    findOne(id) {
-        return this.paymentsService.findOne(id);
+    findOne(id, req) {
+        return this.paymentsService.findOne(id, req.user.sub, req.user.role);
     }
     approve(id, approvePaymentDto, req) {
         return this.paymentsService.approve(id, approvePaymentDto, req.user.sub);
@@ -74,8 +74,9 @@ __decorate([
 __decorate([
     (0, common_1.Get)(':id'),
     __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Req)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
+    __metadata("design:paramtypes", [String, Object]),
     __metadata("design:returntype", void 0)
 ], PaymentsController.prototype, "findOne", null);
 __decorate([

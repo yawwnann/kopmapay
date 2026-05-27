@@ -195,6 +195,7 @@ let DashboardService = class DashboardService {
     async getAdminDashboard(userId) {
         const [users, payments, withdrawals, savings] = await Promise.all([
             this.prisma.user.findMany({
+                where: { role: 'ANGGOTA' },
                 select: {
                     id: true,
                     name: true,

@@ -32,8 +32,8 @@ let WithdrawalsController = class WithdrawalsController {
     findAll(req, userId, startDate, endDate, status) {
         return this.withdrawalsService.findAll(req.user.role, req.user.sub, userId, startDate, endDate, status);
     }
-    findOne(id) {
-        return this.withdrawalsService.findOne(id);
+    findOne(id, req) {
+        return this.withdrawalsService.findOne(id, req.user.sub, req.user.role);
     }
     approve(id, approveWithdrawalDto, req) {
         return this.withdrawalsService.approve(id, approveWithdrawalDto, req.user.sub);
@@ -70,8 +70,9 @@ __decorate([
 __decorate([
     (0, common_1.Get)(':id'),
     __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Req)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
+    __metadata("design:paramtypes", [String, Object]),
     __metadata("design:returntype", void 0)
 ], WithdrawalsController.prototype, "findOne", null);
 __decorate([

@@ -1,10 +1,18 @@
 import { WithdrawalsService } from './withdrawals.service';
 import { CreateWithdrawalDto } from './dto/create-withdrawal.dto';
 import { ApproveWithdrawalDto } from './dto/approve-withdrawal.dto';
+interface JwtRequest extends Request {
+    user: {
+        sub: string;
+        role: string;
+        email: string;
+        name: string;
+    };
+}
 export declare class WithdrawalsController {
     private withdrawalsService;
     constructor(withdrawalsService: WithdrawalsService);
-    create(req: any, createWithdrawalDto: CreateWithdrawalDto): Promise<{
+    create(req: JwtRequest, createWithdrawalDto: CreateWithdrawalDto): Promise<{
         user: {
             email: string;
             id: string;
@@ -24,7 +32,7 @@ export declare class WithdrawalsController {
         savingType: import("@prisma/client").$Enums.SavingType;
         rejectionReason: string | null;
     }>;
-    withdrawAll(req: any, body: {
+    withdrawAll(req: JwtRequest, body: {
         reason: string;
         paymentMethod?: string;
     }): Promise<{
@@ -50,7 +58,7 @@ export declare class WithdrawalsController {
             rejectionReason: string | null;
         })[];
     }>;
-    findAll(req: any, userId?: string, startDate?: string, endDate?: string, status?: string): Promise<({
+    findAll(req: JwtRequest, userId?: string, startDate?: string, endDate?: string, status?: string): Promise<({
         user: {
             email: string;
             id: string;
@@ -70,7 +78,7 @@ export declare class WithdrawalsController {
         savingType: import("@prisma/client").$Enums.SavingType;
         rejectionReason: string | null;
     })[]>;
-    findOne(id: string): Promise<{
+    findOne(id: string, req: JwtRequest): Promise<{
         user: {
             email: string;
             id: string;
@@ -91,7 +99,7 @@ export declare class WithdrawalsController {
         savingType: import("@prisma/client").$Enums.SavingType;
         rejectionReason: string | null;
     }>;
-    approve(id: string, approveWithdrawalDto: ApproveWithdrawalDto, req: any): Promise<{
+    approve(id: string, approveWithdrawalDto: ApproveWithdrawalDto, req: JwtRequest): Promise<{
         user: {
             email: string;
             id: string;
@@ -112,3 +120,4 @@ export declare class WithdrawalsController {
         rejectionReason: string | null;
     }>;
 }
+export {};

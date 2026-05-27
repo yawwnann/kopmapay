@@ -55,7 +55,7 @@ export declare class PaymentsController {
         verifiedBy: string | null;
         verifiedAt: Date | null;
     })[]>;
-    findOne(id: string): Promise<{
+    findOne(id: string, req: JwtRequest): Promise<{
         user: {
             email: string;
             id: string;

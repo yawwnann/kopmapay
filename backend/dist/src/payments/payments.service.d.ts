@@ -68,7 +68,7 @@ export declare class PaymentsService {
         verifiedBy: string | null;
         verifiedAt: Date | null;
     }>;
-    findOne(id: string): Promise<{
+    findOne(id: string, userId?: string, role?: string): Promise<{
         user: {
             email: string;
             id: string;

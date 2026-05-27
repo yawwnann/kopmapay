@@ -62,7 +62,7 @@ export declare class SavingsService {
                 paymentMethod: import("@prisma/client").$Enums.PaymentMethod;
             } | null;
         }[];
-        voluntarySavings: {
+        voluntarySavings: ({
             id: string;
             nominal: number;
             createdAt: Date;
@@ -72,6 +72,16 @@ export declare class SavingsService {
                 status: import("@prisma/client").$Enums.PaymentStatus;
                 paymentMethod: import("@prisma/client").$Enums.PaymentMethod;
             } | null;
-        }[];
+        } | {
+            id: string;
+            nominal: number;
+            createdAt: Date;
+            payment: {
+                id: string;
+                createdAt: Date;
+                status: string;
+                paymentMethod: import("@prisma/client").$Enums.WithdrawalPaymentMethod;
+            };
+        })[];
     }>;
 }

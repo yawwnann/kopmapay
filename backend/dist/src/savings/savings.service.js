@@ -71,7 +71,15 @@ let SavingsService = class SavingsService {
         approvedWithdrawals.forEach((withdrawal) => {
             const amount = Number(withdrawal.nominal);
             const type = withdrawal.savingType.toLowerCase();
-            if (type === 'pokok') {
+            if (type === 'semua') {
+                const currentTotal = breakdown.pokok + breakdown.wajib + breakdown.sukarela;
+                if (currentTotal > 0) {
+                    breakdown.pokok -= Math.round((amount * breakdown.pokok) / currentTotal);
+                    breakdown.wajib -= Math.round((amount * breakdown.wajib) / currentTotal);
+                    breakdown.sukarela -= Math.round((amount * breakdown.sukarela) / currentTotal);
+                }
+            }
+            else if (type === 'pokok') {
                 breakdown.pokok -= amount;
             }
             else if (type === 'wajib') {
@@ -198,8 +206,35 @@ let SavingsService = class SavingsService {
                     },
                 },
             },
-            orderBy: { createdAt: 'desc' },
         });
+        const voluntaryWithdrawals = await this.prisma.withdrawal.findMany({
+            where: { userId, status: 'APPROVED', savingType: 'Sukarela' },
+            select: {
+                id: true,
+                nominal: true,
+                createdAt: true,
+                paymentMethod: true,
+            },
+        });
+        const combinedVoluntary = [
+            ...voluntarySavings.map((vs) => ({
+                id: vs.id,
+                nominal: Number(vs.nominal),
+                createdAt: vs.createdAt,
+                payment: vs.payment,
+            })),
+            ...voluntaryWithdrawals.map((vw) => ({
+                id: vw.id,
+                nominal: -Number(vw.nominal),
+                createdAt: vw.createdAt,
+                payment: {
+                    id: vw.id,
+                    createdAt: vw.createdAt,
+                    status: 'APPROVED',
+                    paymentMethod: vw.paymentMethod,
+                },
+            })),
+        ].sort((a, b) => new Date(b.payment?.createdAt || b.createdAt).getTime() - new Date(a.payment?.createdAt || a.createdAt).getTime());
         return {
             userId,
             mandatorySavings: mandatorySavings.map((ms) => ({
@@ -211,12 +246,7 @@ let SavingsService = class SavingsService {
                 paidAt: ms.paidAt,
                 payment: ms.payment,
             })),
-            voluntarySavings: voluntarySavings.map((vs) => ({
-                id: vs.id,
-                nominal: Number(vs.nominal),
-                createdAt: vs.createdAt,
-                payment: vs.payment,
-            })),
+            voluntarySavings: combinedVoluntary,
         };
     }
 };

@@ -60,6 +60,7 @@ const notifications_module_1 = require("./notifications/notifications.module");
 const dashboard_module_1 = require("./dashboard/dashboard.module");
 const fakultas_module_1 = require("./fakultas/fakultas.module");
 const announcements_module_1 = require("./announcements/announcements.module");
+const admin_module_1 = require("./admin/admin.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -84,6 +85,7 @@ exports.AppModule = AppModule = __decorate([
             dashboard_module_1.DashboardModule,
             fakultas_module_1.FakultasModule,
             announcements_module_1.AnnouncementsModule,
+            admin_module_1.AdminModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

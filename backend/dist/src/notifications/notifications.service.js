@@ -104,9 +104,10 @@ let NotificationsService = class NotificationsService {
     async getUnreadCount(userId, role) {
         const where = { isRead: false };
         if (role === 'ADMIN') {
+            where.OR = [{ userId }, { isAdmin: true }, { userId: null }];
         }
         else {
-            where.OR = [{ userId }, { userId: null }];
+            where.OR = [{ userId }, { userId: null, isAdmin: false }];
         }
         return await this.prisma.notification.count({ where });
     }

@@ -21,6 +21,7 @@ import { NotificationsModule } from './notifications/notifications.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { FakultasModule } from './fakultas/fakultas.module';
 import { AnnouncementsModule } from './announcements/announcements.module';
+import { AdminModule } from './admin/admin.module';
 
 @Module({
   imports: [
@@ -42,6 +43,7 @@ import { AnnouncementsModule } from './announcements/announcements.module';
     DashboardModule,
     FakultasModule,
     AnnouncementsModule,
+    AdminModule,
   ],
   controllers: [AppController],
   providers: [AppService],

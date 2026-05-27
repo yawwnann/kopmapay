@@ -85,7 +85,10 @@ let ReportsService = class ReportsService {
         };
     }
     async getAngkatanReport(angkatan) {
-        const whereClause = angkatan ? { angkatan } : {};
+        const whereClause = { role: 'ANGGOTA' };
+        if (angkatan) {
+            whereClause.angkatan = angkatan;
+        }
         const users = await this.prisma.user.findMany({
             where: whereClause,
             select: {
