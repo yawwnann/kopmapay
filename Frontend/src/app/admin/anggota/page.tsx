@@ -699,24 +699,14 @@ function AnggotaContent() {
                 onClick={closeModal}
                 className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
               >
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
 
             {/* Modal Body (Scrollable) */}
-            <div className="custom-scrollbar flex-1 overflow-y-auto px-6 py-4">
+            <div className="custom-scrollbar flex-1 overflow-y-auto px-6 py-4 dark:bg-boxdark">
               {message && (
                 <div
                   className={`mb-4 rounded-md border p-3 text-sm ${
@@ -782,7 +772,7 @@ function AnggotaContent() {
                     id="role"
                     value={form.role}
                     onChange={(e) => handleFormChange("role", e.target.value)}
-                    className="w-full rounded-lg border border-stroke bg-transparent px-4 py-2.5 text-dark outline-none transition focus:border-primary dark:border-strokedark dark:text-white dark:focus:border-primary"
+                    className="w-full rounded-lg border border-stroke bg-transparent px-4 py-2.5 text-dark outline-none transition focus:border-primary dark:border-strokedark dark:bg-boxdark dark:text-white dark:focus:border-primary"
                     disabled={formLoading}
                   >
                     <option value="ANGGOTA">ANGGOTA</option>
@@ -848,7 +838,7 @@ function AnggotaContent() {
                     id="fakultas"
                     value={form.fakultas}
                     onChange={(e) => handleFakultasChange(e.target.value)}
-                    className="w-full rounded-lg border border-stroke bg-transparent px-4 py-2.5 text-dark outline-none transition focus:border-primary dark:border-strokedark dark:text-white dark:focus:border-primary"
+                    className="w-full rounded-lg border border-stroke bg-transparent px-4 py-2.5 text-dark outline-none transition focus:border-primary dark:border-strokedark dark:bg-boxdark dark:text-white dark:focus:border-primary"
                     disabled={formLoading || fakultasLoading}
                   >
                     <option value="">-- Pilih Fakultas --</option>
@@ -872,7 +862,7 @@ function AnggotaContent() {
                     id="prodi"
                     value={form.prodi}
                     onChange={(e) => handleFormChange("prodi", e.target.value)}
-                    className="w-full rounded-lg border border-stroke bg-transparent px-4 py-2.5 text-dark outline-none transition focus:border-primary dark:border-strokedark dark:text-white dark:focus:border-primary"
+                    className="w-full rounded-lg border border-stroke bg-transparent px-4 py-2.5 text-dark outline-none transition focus:border-primary dark:border-strokedark dark:bg-boxdark dark:text-white dark:focus:border-primary"
                     disabled={
                       formLoading || !form.fakultas || prodiList.length === 0
                     }

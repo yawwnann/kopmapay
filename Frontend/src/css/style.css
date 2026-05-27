@@ -6,6 +6,11 @@
   body {
     @apply bg-gray-2 text-dark-5 dark:bg-[#020D1A] dark:text-dark-6;
   }
+
+  .dark select option {
+    color: #111928;
+    background-color: #ffffff;
+  }
 }
 
 @layer utilities {

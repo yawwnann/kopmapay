@@ -1819,6 +1819,30 @@ export async function apiHandler(
       return wrapBackendResponse(d);
     }
 
+    // Admin transactions endpoints — proxy to real backend
+    if (endpoint === "/admin/transactions/income" && method === "POST") {
+      if (USE_MOCK) return createMockResponse({}, "Mock admin income not supported");
+      const token = getAuthToken();
+      const response = await fetch(`${API_BASE_URL}/admin/transactions/income`, {
+        method: "POST",
+        headers: createHeaders(token),
+        body: JSON.stringify(data),
+      });
+      const d = await response.json();
+      return wrapBackendResponse(d);
+    }
+    if (endpoint === "/admin/transactions/withdrawal" && method === "POST") {
+      if (USE_MOCK) return createMockResponse({}, "Mock admin withdrawal not supported");
+      const token = getAuthToken();
+      const response = await fetch(`${API_BASE_URL}/admin/transactions/withdrawal`, {
+        method: "POST",
+        headers: createHeaders(token),
+        body: JSON.stringify(data),
+      });
+      const d = await response.json();
+      return wrapBackendResponse(d);
+    }
+
     throw new Error(`Unknown endpoint: ${endpoint}`);
   } catch (error: any) {
     console.error("[API Handler Error]:", error);
