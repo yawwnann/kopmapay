@@ -363,6 +363,7 @@ export const adminTransactionsApi = {
     nominal: number;
     description?: string;
     paymentMethod: string;
+    transactionDate?: string;
   }): Promise<ApiResponse> => {
     return apiHandler("/admin/transactions/income", "POST", data);
   },
@@ -373,6 +374,7 @@ export const adminTransactionsApi = {
     reason: string;
     savingType: string;
     paymentMethod?: string;
+    transactionDate?: string;
   }): Promise<ApiResponse> => {
     return apiHandler("/admin/transactions/withdrawal", "POST", data);
   },

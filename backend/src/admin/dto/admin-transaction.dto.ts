@@ -5,6 +5,7 @@ import {
   IsOptional,
   IsString,
   IsUUID,
+  IsDateString,
 } from 'class-validator';
 
 export enum PaymentMethod {
@@ -44,6 +45,10 @@ export class AdminCreateIncomeDto {
   @IsEnum(PaymentMethod)
   @IsNotEmpty()
   paymentMethod: PaymentMethod;
+
+  @IsDateString()
+  @IsOptional()
+  transactionDate?: string;
 }
 
 /**
@@ -69,4 +74,8 @@ export class AdminCreateWithdrawalDto {
   @IsEnum(WithdrawalPaymentMethod)
   @IsOptional()
   paymentMethod?: WithdrawalPaymentMethod;
+
+  @IsDateString()
+  @IsOptional()
+  transactionDate?: string;
 }

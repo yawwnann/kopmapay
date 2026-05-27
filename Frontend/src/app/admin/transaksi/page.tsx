@@ -53,9 +53,16 @@ function TransaksiAdminContent() {
   const [reason, setReason] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("Cash");
   const [savingType, setSavingType] = useState("Sukarela");
+  const [transactionDate, setTransactionDate] = useState("");
   const [processing, setProcessing] = useState(false);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
   const [showModal, setShowModal] = useState(false);
+
+  // Set default date to today on mount
+  useEffect(() => {
+    const today = new Date().toISOString().split('T')[0];
+    setTransactionDate(today);
+  }, []);
 
   useEffect(() => {
     loadUsers();
@@ -148,6 +155,7 @@ function TransaksiAdminContent() {
           nominal: parsedNominal,
           description: description,
           paymentMethod: paymentMethod,
+          transactionDate: transactionDate || undefined,
         });
 
         if (response.success) {
@@ -164,6 +172,7 @@ function TransaksiAdminContent() {
           reason: reason,
           savingType: savingType,
           paymentMethod: paymentMethod,
+          transactionDate: transactionDate || undefined,
         });
 
         if (response.success) {
@@ -180,6 +189,9 @@ function TransaksiAdminContent() {
       setDescription("");
       setReason("");
       setShowModal(false);
+      // Reset date to today
+      const today = new Date().toISOString().split('T')[0];
+      setTransactionDate(today);
     } catch (error: any) {
       console.error("Transaction failed:", error);
       setMessage({ type: "error", text: error.message || "Terjadi kesalahan." });
@@ -417,7 +429,7 @@ function TransaksiAdminContent() {
           )}
 
           {/* Payment Method */}
-          <div className="mb-6">
+          <div className="mb-4">
             <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-400">
               Metode Pembayaran
             </label>
@@ -430,6 +442,23 @@ function TransaksiAdminContent() {
               <option value="QRIS">QRIS</option>
               <option value="BankTransfer">Transfer Bank</option>
             </select>
+          </div>
+
+          {/* Transaction Date */}
+          <div className="mb-6">
+            <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-400">
+              Tanggal Transaksi
+            </label>
+            <input
+              type="date"
+              value={transactionDate}
+              onChange={(e) => setTransactionDate(e.target.value)}
+              max={new Date().toISOString().split('T')[0]}
+              className="w-full rounded-lg border border-stroke bg-white px-4 py-3 text-dark outline-none transition focus:border-primary dark:border-strokedark dark:bg-gray-800 dark:text-white"
+            />
+            <p className="mt-1 text-xs text-gray-500">
+              Tanggal akan digunakan sebagai tanggal transaksi. Biarkan kosong untuk menggunakan tanggal hari ini.
+            </p>
           </div>
 
           {/* Message */}
@@ -590,6 +619,19 @@ function TransaksiAdminContent() {
                 <div className="flex items-center justify-between rounded-lg border border-stroke p-3 dark:border-strokedark">
                   <span className="text-sm text-gray-600 dark:text-gray-400">Alasan</span>
                   <span className="text-sm text-dark dark:text-white">{reason}</span>
+                </div>
+              )}
+              {transactionDate && (
+                <div className="flex items-center justify-between rounded-lg border border-stroke p-3 dark:border-strokedark">
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Tanggal</span>
+                  <span className="text-sm font-medium text-dark dark:text-white">
+                    {new Date(transactionDate).toLocaleDateString('id-ID', {
+                      weekday: 'long',
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </span>
                 </div>
               )}
             </div>

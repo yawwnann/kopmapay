@@ -40,6 +40,11 @@ export class AdminTransactionsService {
       throw new BadRequestException('User account is not active');
     }
 
+    // Use custom date or current date
+    const transactionDate = dto.transactionDate
+      ? new Date(dto.transactionDate)
+      : new Date();
+
     // Create payment with APPROVED status directly
     const payment = await this.prisma.$transaction(async (tx) => {
       // Create payment record as APPROVED
@@ -52,7 +57,8 @@ export class AdminTransactionsService {
           paymentMethod: dto.paymentMethod as any,
           status: 'APPROVED',
           verifiedBy: adminId,
-          verifiedAt: new Date(),
+          verifiedAt: transactionDate,
+          createdAt: transactionDate,
         },
         include: {
           user: {
@@ -81,9 +87,8 @@ export class AdminTransactionsService {
 
       // Track in MandatorySaving or VoluntarySaving based on description
       const desc = (dto.description || '').toLowerCase();
-      const now = new Date();
-      const month = now.getMonth() + 1;
-      const year = now.getFullYear();
+      const month = transactionDate.getMonth() + 1;
+      const year = transactionDate.getFullYear();
 
       if (desc.includes('wajib')) {
         await tx.mandatorySaving.upsert({
@@ -97,7 +102,7 @@ export class AdminTransactionsService {
           update: {
             nominal: new Prisma.Decimal(dto.nominal),
             status: 'PAID',
-            paidAt: new Date(),
+            paidAt: transactionDate,
             paymentId: newPayment.id,
           },
           create: {
@@ -106,7 +111,7 @@ export class AdminTransactionsService {
             year,
             nominal: new Prisma.Decimal(dto.nominal),
             status: 'PAID',
-            paidAt: new Date(),
+            paidAt: transactionDate,
             paymentId: newPayment.id,
           },
         });
@@ -117,6 +122,7 @@ export class AdminTransactionsService {
             userId: dto.userId,
             nominal: new Prisma.Decimal(dto.nominal),
             paymentId: newPayment.id,
+            createdAt: transactionDate,
           },
         });
       }
@@ -249,6 +255,11 @@ export class AdminTransactionsService {
       );
     }
 
+    // Use custom date or current date
+    const transactionDate = dto.transactionDate
+      ? new Date(dto.transactionDate)
+      : new Date();
+
     // Create withdrawal with APPROVED status directly
     const withdrawal = await this.prisma.$transaction(async (tx) => {
       // Create withdrawal record as APPROVED
@@ -261,7 +272,8 @@ export class AdminTransactionsService {
           paymentMethod: (dto.paymentMethod || 'Cash') as any,
           status: 'APPROVED',
           verifiedBy: adminId,
-          verifiedAt: new Date(),
+          verifiedAt: transactionDate,
+          createdAt: transactionDate,
         },
         include: {
           user: {
