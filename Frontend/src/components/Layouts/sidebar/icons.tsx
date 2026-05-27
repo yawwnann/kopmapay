@@ -3,6 +3,7 @@
 
 export {
   ChevronUp,
+  ChevronDown as ChevronDownIcon,
   Home as HomeIcon,
   Calendar,
   Settings,

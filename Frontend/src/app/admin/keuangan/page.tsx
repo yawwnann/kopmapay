@@ -53,16 +53,20 @@ function KeuanganContent() {
     try {
       const response = await savingsApi.getAllSavings();
       if (response.success && Array.isArray(response.data)) {
-        const transformedSavings = response.data.map((item: any) => ({
-          id: item.id,
-          userId: item.userId,
-          userName: item.user?.name || "Unknown",
-          userAvatar: item.user?.name?.charAt(0).toUpperCase() || "U",
-          email: item.user?.email || "-",
-          angkatan: item.user?.angkatan || "-",
-          total: Number(item.total) || 0,
-          updatedAt: item.updatedAt,
-        }));
+        const transformedSavings = response.data.map((item: any) => {
+          // Handle Prisma Decimal object
+          const totalAmount = item.total?.toString ? Number(item.total.toString()) : Number(item.total);
+          return {
+            id: item.id,
+            userId: item.userId,
+            userName: item.user?.name || "Unknown",
+            userAvatar: item.user?.name?.charAt(0).toUpperCase() || "U",
+            email: item.user?.email || "-",
+            angkatan: item.user?.angkatan || "-",
+            total: totalAmount || 0,
+            updatedAt: item.updatedAt,
+          };
+        });
         setSavings(transformedSavings);
       }
     } catch (error) {

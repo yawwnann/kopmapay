@@ -354,3 +354,26 @@ export const announcementsApi = {
     return apiHandler(`/announcements/${id}`, "DELETE");
   },
 };
+
+// ==================== ADMIN TRANSACTIONS ====================
+
+export const adminTransactionsApi = {
+  addIncome: (data: {
+    userId: string;
+    nominal: number;
+    description?: string;
+    paymentMethod: string;
+  }): Promise<ApiResponse> => {
+    return apiHandler("/admin/transactions/income", "POST", data);
+  },
+
+  addWithdrawal: (data: {
+    userId: string;
+    nominal: number;
+    reason: string;
+    savingType: string;
+    paymentMethod?: string;
+  }): Promise<ApiResponse> => {
+    return apiHandler("/admin/transactions/withdrawal", "POST", data);
+  },
+};

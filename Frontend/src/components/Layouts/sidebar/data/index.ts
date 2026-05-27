@@ -11,34 +11,40 @@ export const NAV_DATA = [
         url: "/",
         items: [],
       },
-      // ANGGOTA only menus
+    ],
+  },
+  {
+    label: "TRANSAKSI ANGGOTA",
+    items: [
       {
-        title: "Input Pembayaran",
+        title: "Pembayaran",
         icon: Icons.MoneySend,
         roles: ["ANGGOTA"],
-        url: "/pembayaran",
-        items: [],
+        items: [
+          {
+            title: "Input Pembayaran",
+            url: "/pembayaran",
+          },
+          {
+            title: "Riwayat Pembayaran",
+            url: "/pembayaran/riwayat",
+          },
+        ],
       },
       {
-        title: "Riwayat Pembayaran",
-        icon: Icons.MoneySend,
-        roles: ["ANGGOTA"],
-        url: "/pembayaran/riwayat",
-        items: [],
-      },
-      {
-        title: "Request Penarikan",
+        title: "Penarikan",
         icon: Icons.MoneyReceive,
         roles: ["ANGGOTA"],
-        url: "/penarikan",
-        items: [],
-      },
-      {
-        title: "Riwayat Penarikan",
-        icon: Icons.MoneyReceive,
-        roles: ["ANGGOTA"],
-        url: "/penarikan/riwayat",
-        items: [],
+        items: [
+          {
+            title: "Request Penarikan",
+            url: "/penarikan",
+          },
+          {
+            title: "Riwayat Penarikan",
+            url: "/penarikan/riwayat",
+          },
+        ],
       },
       {
         title: "Saldo Saya",
@@ -47,45 +53,63 @@ export const NAV_DATA = [
         roles: ["ANGGOTA"],
         items: [],
       },
-      // ADMIN only menus
+    ],
+  },
+  {
+    label: "ADMINISTRASI",
+    items: [
       {
         title: "Kelola Anggota",
         icon: Icons.UsersGroup,
         roles: ["ADMIN"],
-        url: "/admin/anggota",
-        items: [],
+        items: [
+          {
+            title: "Daftar Anggota",
+            url: "/admin/anggota",
+          },
+          {
+            title: "Tunggakan",
+            url: "/admin/anggota/tunggakan",
+          },
+        ],
       },
       {
-        title: "Verifikasi Pembayaran",
-        icon: Icons.MoneySend,
+        title: "Verifikasi",
+        icon: Icons.CheckCircle,
         roles: ["ADMIN"],
-        url: "/admin/verifikasi-pembayaran",
-        items: [],
-      },
-      {
-        title: "Verifikasi Penarikan",
-        icon: Icons.MoneyReceive,
-        roles: ["ADMIN"],
-        url: "/admin/verifikasi-penarikan",
-        items: [],
+        items: [
+          {
+            title: "Pembayaran",
+            url: "/admin/verifikasi-pembayaran",
+          },
+          {
+            title: "Penarikan",
+            url: "/admin/verifikasi-penarikan",
+          },
+        ],
       },
       {
         title: "Keuangan",
         icon: Icons.Wallet,
         roles: ["ADMIN"],
-        url: "/admin/keuangan",
-        items: [],
-      },
-      {
-        title: "Riwayat Simpanan",
-        icon: Icons.Report,
-        roles: ["ADMIN"],
-        url: "/admin/riwayat-simpanan",
-        items: [],
+        items: [
+          {
+            title: "Ringkasan Keuangan",
+            url: "/admin/keuangan",
+          },
+          {
+            title: "Transaksi Manual",
+            url: "/admin/transaksi",
+          },
+          {
+            title: "Riwayat Simpanan",
+            url: "/admin/riwayat-simpanan",
+          },
+        ],
       },
       {
         title: "Laporan",
-        icon: Icons.Alphabet,
+        icon: Icons.Report,
         roles: ["ADMIN"],
         url: "/admin/laporan",
         items: [],
@@ -97,7 +121,11 @@ export const NAV_DATA = [
         url: "/admin/pengumuman",
         items: [],
       },
-      // Common menus
+    ],
+  },
+  {
+    label: "LAINNYA",
+    items: [
       {
         title: "Profile",
         url: "/profile",
