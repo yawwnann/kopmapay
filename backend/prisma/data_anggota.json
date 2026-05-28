@@ -3562,24 +3562,134 @@
     },
     "simpanan_sukarela": [
       {
-        "tanggal": "31/01/2026",
-        "nominal": 300000,
-        "saldo": 500000
+        "tanggal": "11/13/2020",
+        "nominal": 50000,
+        "saldo": 50000
       },
       {
-        "tanggal": "03/02/2026",
+        "tanggal": "12/10/2020",
+        "nominal": 50000,
+        "saldo": 100000
+      },
+      {
+        "tanggal": "1/19/2021",
+        "nominal": 50000,
+        "saldo": 150000
+      },
+      {
+        "tanggal": "3/13/2021",
+        "nominal": 50000,
+        "saldo": 200000
+      },
+      {
+        "tanggal": "4/1/2021",
+        "nominal": 30000,
+        "saldo": 230000
+      },
+      {
+        "tanggal": "5/27/2021",
+        "nominal": 50000,
+        "saldo": 280000
+      },
+      {
+        "tanggal": "8/5/2021",
+        "nominal": 20000,
+        "saldo": 300000
+      },
+      {
+        "tanggal": "19/10/2021",
+        "nominal": 50000,
+        "saldo": 350000
+      },
+      {
+        "tanggal": "8/12/2021",
+        "nominal": 50000,
+        "saldo": 400000
+      },
+      {
+        "tanggal": "3/3/2022",
+        "nominal": 50000,
+        "saldo": 450000
+      },
+      {
+        "tanggal": "5/14/2022",
+        "nominal": 100000,
+        "saldo": 550000
+      },
+      {
+        "tanggal": "11/10/2022",
+        "nominal": 100000,
+        "saldo": 650000
+      },
+      {
+        "tanggal": "2/1/2023",
+        "nominal": 100000,
+        "saldo": 750000
+      },
+      {
+        "tanggal": "12/7/2023",
+        "nominal": 100000,
+        "saldo": 850000
+      },
+      {
+        "tanggal": "5/9/2023",
+        "nominal": 150000,
+        "saldo": 1000000
+      },
+      {
+        "tanggal": "6/11/2023",
+        "nominal": 300000,
+        "saldo": 1300000
+      },
+      {
+        "tanggal": "3/6/2024",
+        "nominal": 200000,
+        "saldo": 1500000
+      },
+      {
+        "tanggal": "5/15/2024",
+        "nominal": 400000,
+        "saldo": 1900000
+      },
+      {
+        "tanggal": "9/20/2024",
+        "nominal": 300000,
+        "saldo": 2200000
+      },
+      {
+        "tanggal": "4/19/2025",
+        "nominal": 400000,
+        "saldo": 2600000
+      },
+      {
+        "tanggal": "9/2/2025",
+        "nominal": 200000,
+        "saldo": 2800000
+      },
+      {
+        "tanggal": "10/12/2025",
+        "nominal": 100000,
+        "saldo": 2900000
+      },
+      {
+        "tanggal": "1/31/2026",
+        "nominal": 300000,
+        "saldo": 3200000
+      },
+      {
+        "tanggal": "2/3/2026",
         "nominal": 332590,
-        "saldo": 832590
+        "saldo": 3532590
       },
       {
         "tanggal": "06/04/2026",
         "nominal": 300000,
-        "saldo": 1132590
+        "saldo": 3832590
       },
       {
         "tanggal": "22/05/2026",
         "nominal": 300000,
-        "saldo": 1432590
+        "saldo": 4132590
       }
     ]
   },
@@ -5615,13 +5725,308 @@
     "prodi": "",
     "no_hp": "",
     "simpanan_wajib": {
-      "2019": {},
-      "2020": {},
-      "2021": {},
-      "2022": {},
-      "2023": {},
-      "2024": {},
-      "2025": {},
+      "2019": {
+        "September": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/10/2019"
+        },
+        "Oktober": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/10/2019"
+        },
+        "November": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/10/2019"
+        },
+        "Desember": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/10/2019"
+        }
+      },
+      "2020": {
+        "Januari": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/10/2019"
+        },
+        "Februari": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/10/2019"
+        },
+        "Maret": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/10/2019"
+        },
+        "April": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/10/2019"
+        },
+        "Mei": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/10/2019"
+        },
+        "Juni": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/10/2019"
+        },
+        "Juli": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/10/2019"
+        },
+        "Agustus": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/10/2019"
+        },
+        "September": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/09/2020"
+        },
+        "Oktober": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/09/2020"
+        },
+        "November": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/09/2020"
+        },
+        "Desember": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/09/2020"
+        }
+      },
+      "2021": {
+        "Januari": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/09/2020"
+        },
+        "Februari": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/09/2020"
+        },
+        "Maret": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/09/2020"
+        },
+        "April": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/09/2020"
+        },
+        "Mei": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/09/2020"
+        },
+        "Juni": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/09/2020"
+        },
+        "Juli": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/09/2020"
+        },
+        "Agustus": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/09/2020"
+        },
+        "September": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/10/201"
+        },
+        "Oktober": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/10/201"
+        },
+        "November": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/10/201"
+        },
+        "Desember": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/10/201"
+        }
+      },
+      "2022": {
+        "Januari": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/10/2021"
+        },
+        "Februari": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/10/2021"
+        },
+        "Maret": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/10/2021"
+        },
+        "April": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/10/2021"
+        },
+        "Mei": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/10/2021"
+        },
+        "Juni": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/10/2021"
+        },
+        "Juli": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/10/2021"
+        },
+        "Agustus": {
+          "nominal": 10000,
+          "tanggal_bayar": "21/10/2021"
+        },
+        "September": {
+          "nominal": 10000,
+          "tanggal_bayar": "27/06/2023"
+        },
+        "Oktober": {
+          "nominal": 10000,
+          "tanggal_bayar": "27/06/2023"
+        },
+        "November": {
+          "nominal": 10000,
+          "tanggal_bayar": "27/06/2023"
+        },
+        "Desember": {
+          "nominal": 10000,
+          "tanggal_bayar": "27/06/2023"
+        }
+      },
+      "2023": {
+        "Januari": {
+          "nominal": 10000,
+          "tanggal_bayar": "27/06/2023"
+        },
+        "Februari": {
+          "nominal": 10000,
+          "tanggal_bayar": "27/06/2023"
+        },
+        "Maret": {
+          "nominal": 10000,
+          "tanggal_bayar": "27/06/2023"
+        },
+        "April": {
+          "nominal": 10000,
+          "tanggal_bayar": "27/06/2023"
+        },
+        "Mei": {
+          "nominal": 10000,
+          "tanggal_bayar": "27/06/2023"
+        },
+        "Juni": {
+          "nominal": 10000,
+          "tanggal_bayar": "27/06/2023"
+        },
+        "Juli": {
+          "nominal": 10000,
+          "tanggal_bayar": "27/06/2023"
+        },
+        "Agustus": {
+          "nominal": 10000,
+          "tanggal_bayar": "27/06/2023"
+        },
+        "September": {
+          "nominal": 10000,
+          "tanggal_bayar": "16/03/2024"
+        },
+        "Oktober": {
+          "nominal": 10000,
+          "tanggal_bayar": "16/03/2024"
+        },
+        "November": {
+          "nominal": 10000,
+          "tanggal_bayar": "16/03/2024"
+        },
+        "Desember": {
+          "nominal": 10000,
+          "tanggal_bayar": "16/03/2024"
+        }
+      },
+      "2024": {
+        "Januari": {
+          "nominal": 10000,
+          "tanggal_bayar": "16/03/2024"
+        },
+        "Februari": {
+          "nominal": 10000,
+          "tanggal_bayar": "16/03/2024"
+        },
+        "Maret": {
+          "nominal": 10000,
+          "tanggal_bayar": "16/03/2024"
+        },
+        "April": {
+          "nominal": 10000,
+          "tanggal_bayar": "16/03/2024"
+        },
+        "Mei": {
+          "nominal": 10000,
+          "tanggal_bayar": "16/03/2024"
+        },
+        "Juni": {
+          "nominal": 10000,
+          "tanggal_bayar": "16/03/2024"
+        },
+        "Juli": {
+          "nominal": 10000,
+          "tanggal_bayar": "16/03/2024"
+        },
+        "Agustus": {
+          "nominal": 10000,
+          "tanggal_bayar": "16/03/2024"
+        },
+        "September": {
+          "nominal": 10000,
+          "tanggal_bayar": "28/12/2024"
+        },
+        "Oktober": {
+          "nominal": 10000,
+          "tanggal_bayar": "28/12/2024"
+        },
+        "November": {
+          "nominal": 10000,
+          "tanggal_bayar": "28/12/2024"
+        },
+        "Desember": {
+          "nominal": 10000,
+          "tanggal_bayar": "28/12/2024"
+        }
+      },
+      "2025": {
+        "Januari": {
+          "nominal": 10000,
+          "tanggal_bayar": "28/12/2024"
+        },
+        "Februari": {
+          "nominal": 10000,
+          "tanggal_bayar": "28/12/2024"
+        },
+        "Maret": {
+          "nominal": 10000,
+          "tanggal_bayar": "28/12/2024"
+        },
+        "April": {
+          "nominal": 10000,
+          "tanggal_bayar": "28/12/2024"
+        },
+        "Mei": {
+          "nominal": 10000,
+          "tanggal_bayar": "28/12/2024"
+        },
+        "Juni": {
+          "nominal": 10000,
+          "tanggal_bayar": "28/12/2024"
+        },
+        "Juli": {
+          "nominal": 10000,
+          "tanggal_bayar": "28/12/2024"
+        },
+        "Agustus": {
+          "nominal": 10000,
+          "tanggal_bayar": "28/12/2024"
+        }
+      },
       "2026": {}
     },
     "simpanan_sukarela": [
