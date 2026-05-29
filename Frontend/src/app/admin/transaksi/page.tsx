@@ -13,6 +13,9 @@ import {
   ChevronDown,
   CheckCircle,
   AlertCircle,
+  Upload,
+  ImageIcon,
+  Trash2,
 } from "lucide-react";
 
 interface User {
@@ -57,6 +60,10 @@ function TransaksiAdminContent() {
   const [processing, setProcessing] = useState(false);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
   const [showModal, setShowModal] = useState(false);
+
+  // Proof image state
+  const [proofFile, setProofFile] = useState<File | null>(null);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
   // Set default date to today on mount
   useEffect(() => {
@@ -120,6 +127,35 @@ function TransaksiAdminContent() {
     setMessage(null);
   };
 
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] || null;
+    if (file) {
+      if (!file.type.startsWith("image/")) {
+        setMessage({
+          type: "error",
+          text: "File harus berupa gambar (JPG, PNG, dll).",
+        });
+        return;
+      }
+      if (file.size > 1 * 1024 * 1024) {
+        setMessage({ type: "error", text: "Ukuran file maksimal 1MB." });
+        return;
+      }
+      setProofFile(file);
+      const url = URL.createObjectURL(file);
+      setPreviewUrl(url);
+      setMessage(null);
+    }
+  };
+
+  const handleRemoveProof = () => {
+    setProofFile(null);
+    if (previewUrl) {
+      URL.revokeObjectURL(previewUrl);
+    }
+    setPreviewUrl(null);
+  };
+
   const handleSubmit = async () => {
     if (!selectedUser || !nominal) {
       setMessage({ type: "error", text: "Pilih anggota dan masukkan nominal." });
@@ -137,6 +173,11 @@ function TransaksiAdminContent() {
       return;
     }
 
+    if (!proofFile) {
+      setMessage({ type: "error", text: "Harap lampirkan bukti transaksi." });
+      return;
+    }
+
     setShowModal(true);
   };
 
@@ -149,13 +190,26 @@ function TransaksiAdminContent() {
     try {
       const parsedNominal = parseFloat(nominal);
 
+      // Build FormData with proof image
+      const formData = new FormData();
+      formData.append("userId", selectedUser.id);
+      formData.append("nominal", parsedNominal.toString());
+      formData.append("paymentMethod", paymentMethod);
+      if (transactionDate) {
+        formData.append("transactionDate", transactionDate);
+      }
+
       if (transactionType === "income") {
+        formData.append("description", description || "Admin deposit");
+        formData.append("proofImage", proofFile!);
+
         const response = await adminTransactionsApi.addIncome({
           userId: selectedUser.id,
           nominal: parsedNominal,
           description: description,
           paymentMethod: paymentMethod,
           transactionDate: transactionDate || undefined,
+          proofImage: proofFile!,
         });
 
         if (response.success) {
@@ -166,6 +220,10 @@ function TransaksiAdminContent() {
           setMessage({ type: "error", text: response.message || "Gagal menambahkan saldo." });
         }
       } else {
+        formData.append("reason", reason);
+        formData.append("savingType", savingType);
+        formData.append("proofImage", proofFile!);
+
         const response = await adminTransactionsApi.addWithdrawal({
           userId: selectedUser.id,
           nominal: parsedNominal,
@@ -173,6 +231,7 @@ function TransaksiAdminContent() {
           savingType: savingType,
           paymentMethod: paymentMethod,
           transactionDate: transactionDate || undefined,
+          proofImage: proofFile!,
         });
 
         if (response.success) {
@@ -188,6 +247,11 @@ function TransaksiAdminContent() {
       setNominal("");
       setDescription("");
       setReason("");
+      setProofFile(null);
+      if (previewUrl) {
+        URL.revokeObjectURL(previewUrl);
+      }
+      setPreviewUrl(null);
       setShowModal(false);
       // Reset date to today
       const today = new Date().toISOString().split('T')[0];
@@ -445,7 +509,7 @@ function TransaksiAdminContent() {
           </div>
 
           {/* Transaction Date */}
-          <div className="mb-6">
+          <div className="mb-4">
             <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-400">
               Tanggal Transaksi
             </label>
@@ -459,6 +523,53 @@ function TransaksiAdminContent() {
             <p className="mt-1 text-xs text-gray-500">
               Tanggal akan digunakan sebagai tanggal transaksi. Biarkan kosong untuk menggunakan tanggal hari ini.
             </p>
+          </div>
+
+          {/* Proof Image Upload */}
+          <div className="mb-6">
+            <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-400">
+              Bukti Transaksi <span className="text-red-500">*</span>
+            </label>
+
+            {previewUrl ? (
+              <div className="relative rounded-lg border border-stroke dark:border-strokedark">
+                <div className="relative overflow-hidden rounded-lg">
+                  <img
+                    src={previewUrl}
+                    alt="Preview bukti transaksi"
+                    className="max-h-48 w-full object-contain"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={handleRemoveProof}
+                  className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-red-500 text-white shadow-sm hover:bg-red-600"
+                >
+                  <Trash2 className="h-4 w-4" />
+                </button>
+                <div className="border-t border-stroke p-2 dark:border-strokedark">
+                  <p className="text-xs text-gray-500 truncate">{proofFile?.name}</p>
+                </div>
+              </div>
+            ) : (
+              <label className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-stroke p-6 cursor-pointer hover:border-primary hover:bg-gray-50 dark:border-strokedark dark:hover:bg-gray-800 transition">
+                <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800">
+                  <ImageIcon className="h-6 w-6 text-gray-400" />
+                </div>
+                <span className="mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">
+                  Klik untuk upload bukti
+                </span>
+                <span className="text-xs text-gray-500">
+                  JPG, PNG, WEBP • Maks 1MB
+                </span>
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                  className="hidden"
+                />
+              </label>
+            )}
           </div>
 
           {/* Message */}
@@ -483,7 +594,7 @@ function TransaksiAdminContent() {
           <button
             type="button"
             onClick={handleSubmit}
-            disabled={!selectedUser || !nominal || processing}
+            disabled={!selectedUser || !nominal || !proofFile || processing}
             className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-medium text-white transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-50"
           >
             <Plus className="h-5 w-5" />
@@ -632,6 +743,17 @@ function TransaksiAdminContent() {
                       day: 'numeric',
                     })}
                   </span>
+                </div>
+              )}
+              {/* Proof Image Preview in Modal */}
+              {previewUrl && (
+                <div className="rounded-lg border border-stroke p-3 dark:border-strokedark">
+                  <span className="mb-2 block text-sm text-gray-600 dark:text-gray-400">Bukti Transaksi</span>
+                  <img
+                    src={previewUrl}
+                    alt="Bukti transaksi"
+                    className="h-32 w-full rounded object-cover"
+                  />
                 </div>
               )}
             </div>

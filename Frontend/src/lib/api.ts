@@ -364,8 +364,9 @@ export const adminTransactionsApi = {
     description?: string;
     paymentMethod: string;
     transactionDate?: string;
+    proofImage?: File;
   }): Promise<ApiResponse> => {
-    return apiHandler("/admin/transactions/income", "POST", data);
+    return apiHandler("/admin/transactions/income", "POST", data, undefined, !!data.proofImage);
   },
 
   addWithdrawal: (data: {
@@ -375,7 +376,8 @@ export const adminTransactionsApi = {
     savingType: string;
     paymentMethod?: string;
     transactionDate?: string;
+    proofImage?: File;
   }): Promise<ApiResponse> => {
-    return apiHandler("/admin/transactions/withdrawal", "POST", data);
+    return apiHandler("/admin/transactions/withdrawal", "POST", data, undefined, !!data.proofImage);
   },
 };

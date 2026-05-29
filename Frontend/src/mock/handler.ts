@@ -1823,10 +1823,12 @@ export async function apiHandler(
     if (endpoint === "/admin/transactions/income" && method === "POST") {
       if (USE_MOCK) return createMockResponse({}, "Mock admin income not supported");
       const token = getAuthToken();
+      const headers = createHeaders(token, isFormData);
       const response = await fetch(`${API_BASE_URL}/admin/transactions/income`, {
         method: "POST",
-        headers: createHeaders(token),
-        body: JSON.stringify(data),
+        headers,
+        credentials: "include",
+        body: isFormData ? data : JSON.stringify(data),
       });
       const d = await response.json();
       return wrapBackendResponse(d);
@@ -1834,10 +1836,12 @@ export async function apiHandler(
     if (endpoint === "/admin/transactions/withdrawal" && method === "POST") {
       if (USE_MOCK) return createMockResponse({}, "Mock admin withdrawal not supported");
       const token = getAuthToken();
+      const headers = createHeaders(token, isFormData);
       const response = await fetch(`${API_BASE_URL}/admin/transactions/withdrawal`, {
         method: "POST",
-        headers: createHeaders(token),
-        body: JSON.stringify(data),
+        headers,
+        credentials: "include",
+        body: isFormData ? data : JSON.stringify(data),
       });
       const d = await response.json();
       return wrapBackendResponse(d);

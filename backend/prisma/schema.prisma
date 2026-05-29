@@ -109,6 +109,7 @@ model Withdrawal {
   id              String                  @id @default(uuid())
   userId          String
   nominal         Decimal                 @db.Decimal(15, 2)
+  proofImage      String?                 // Bukti transfer penarikan (opsional untuk admin)
   reason          String
   savingType      SavingType              @default(Sukarela)
   paymentMethod   WithdrawalPaymentMethod @default(Cash)

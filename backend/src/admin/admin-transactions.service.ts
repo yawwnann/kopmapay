@@ -25,8 +25,13 @@ export class AdminTransactionsService {
   /**
    * Admin adds income directly to member's savings
    * Creates an APPROVED payment directly (no verification needed)
+   * Requires proof image (uploaded by admin)
    */
-  async addIncome(adminId: string, dto: AdminCreateIncomeDto) {
+  async addIncome(
+    adminId: string,
+    dto: AdminCreateIncomeDto,
+    proofImageUrl?: string,
+  ) {
     // Validate user exists
     const user = await this.prisma.user.findUnique({
       where: { id: dto.userId },
@@ -52,7 +57,7 @@ export class AdminTransactionsService {
         data: {
           userId: dto.userId,
           nominal: new Prisma.Decimal(dto.nominal),
-          proofImage: '/uploads/proofs/admin-direct-deposit.png',
+          proofImage: proofImageUrl || '/uploads/proofs/admin-direct-deposit.png',
           description: dto.description || 'Admin deposit',
           paymentMethod: dto.paymentMethod as any,
           status: 'APPROVED',
@@ -165,8 +170,13 @@ export class AdminTransactionsService {
   /**
    * Admin adds withdrawal directly for member
    * Creates an APPROVED withdrawal directly (no verification needed)
+   * Requires proof image (uploaded by admin)
    */
-  async addWithdrawal(adminId: string, dto: AdminCreateWithdrawalDto) {
+  async addWithdrawal(
+    adminId: string,
+    dto: AdminCreateWithdrawalDto,
+    proofImageUrl?: string,
+  ) {
     // Validate user exists
     const user = await this.prisma.user.findUnique({
       where: { id: dto.userId },
@@ -267,6 +277,7 @@ export class AdminTransactionsService {
         data: {
           userId: dto.userId,
           nominal: new Prisma.Decimal(dto.nominal),
+          proofImage: proofImageUrl || null,
           reason: `[Admin] ${dto.reason}`,
           savingType: dto.savingType as any,
           paymentMethod: (dto.paymentMethod || 'Cash') as any,
