@@ -273,11 +273,12 @@ export class AdminTransactionsService {
     // Create withdrawal with APPROVED status directly
     const withdrawal = await this.prisma.$transaction(async (tx) => {
       // Create withdrawal record as APPROVED
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const newWithdrawal = await tx.withdrawal.create({
         data: {
           userId: dto.userId,
           nominal: new Prisma.Decimal(dto.nominal),
-          proofImage: proofImageUrl || null,
+          proofImage: proofImageUrl,
           reason: `[Admin] ${dto.reason}`,
           savingType: dto.savingType as any,
           paymentMethod: (dto.paymentMethod || 'Cash') as any,
@@ -285,7 +286,7 @@ export class AdminTransactionsService {
           verifiedBy: adminId,
           verifiedAt: transactionDate,
           createdAt: transactionDate,
-        },
+        } as any,
         include: {
           user: {
             select: {
