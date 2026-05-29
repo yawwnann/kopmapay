@@ -366,7 +366,19 @@ export const adminTransactionsApi = {
     transactionDate?: string;
     proofImage?: File;
   }): Promise<ApiResponse> => {
-    return apiHandler("/admin/transactions/income", "POST", data, undefined, !!data.proofImage);
+    // Jika ada proofImage, kirim sebagai FormData
+    if (data.proofImage) {
+      const formData = new FormData();
+      formData.append("userId", data.userId);
+      formData.append("nominal", data.nominal.toString());
+      if (data.description) formData.append("description", data.description);
+      formData.append("paymentMethod", data.paymentMethod);
+      if (data.transactionDate) formData.append("transactionDate", data.transactionDate);
+      formData.append("proofImage", data.proofImage);
+      return apiHandler("/admin/transactions/income", "POST", formData, undefined, true);
+    }
+    // Fallback: JSON biasa (tanpa bukti)
+    return apiHandler("/admin/transactions/income", "POST", data);
   },
 
   addWithdrawal: (data: {
@@ -378,6 +390,19 @@ export const adminTransactionsApi = {
     transactionDate?: string;
     proofImage?: File;
   }): Promise<ApiResponse> => {
-    return apiHandler("/admin/transactions/withdrawal", "POST", data, undefined, !!data.proofImage);
+    // Jika ada proofImage, kirim sebagai FormData
+    if (data.proofImage) {
+      const formData = new FormData();
+      formData.append("userId", data.userId);
+      formData.append("nominal", data.nominal.toString());
+      formData.append("reason", data.reason);
+      formData.append("savingType", data.savingType);
+      if (data.paymentMethod) formData.append("paymentMethod", data.paymentMethod);
+      if (data.transactionDate) formData.append("transactionDate", data.transactionDate);
+      formData.append("proofImage", data.proofImage);
+      return apiHandler("/admin/transactions/withdrawal", "POST", formData, undefined, true);
+    }
+    // Fallback: JSON biasa
+    return apiHandler("/admin/transactions/withdrawal", "POST", data);
   },
 };

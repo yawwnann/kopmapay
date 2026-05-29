@@ -190,23 +190,11 @@ function TransaksiAdminContent() {
     try {
       const parsedNominal = parseFloat(nominal);
 
-      // Build FormData with proof image
-      const formData = new FormData();
-      formData.append("userId", selectedUser.id);
-      formData.append("nominal", parsedNominal.toString());
-      formData.append("paymentMethod", paymentMethod);
-      if (transactionDate) {
-        formData.append("transactionDate", transactionDate);
-      }
-
       if (transactionType === "income") {
-        formData.append("description", description || "Admin deposit");
-        formData.append("proofImage", proofFile!);
-
         const response = await adminTransactionsApi.addIncome({
           userId: selectedUser.id,
           nominal: parsedNominal,
-          description: description,
+          description: description || "Admin deposit",
           paymentMethod: paymentMethod,
           transactionDate: transactionDate || undefined,
           proofImage: proofFile!,
@@ -214,16 +202,11 @@ function TransaksiAdminContent() {
 
         if (response.success) {
           setMessage({ type: "success", text: `Berhasil menambahkan saldo Rp${parsedNominal.toLocaleString("id-ID")} ke ${selectedUser.name}.` });
-          // Refresh savings
           await loadUserSavings(selectedUser.id);
         } else {
           setMessage({ type: "error", text: response.message || "Gagal menambahkan saldo." });
         }
       } else {
-        formData.append("reason", reason);
-        formData.append("savingType", savingType);
-        formData.append("proofImage", proofFile!);
-
         const response = await adminTransactionsApi.addWithdrawal({
           userId: selectedUser.id,
           nominal: parsedNominal,
@@ -236,14 +219,12 @@ function TransaksiAdminContent() {
 
         if (response.success) {
           setMessage({ type: "success", text: `Berhasil menarik saldo Rp${parsedNominal.toLocaleString("id-ID")} dari ${selectedUser.name}.` });
-          // Refresh savings
           await loadUserSavings(selectedUser.id);
         } else {
           setMessage({ type: "error", text: response.message || "Gagal menarik saldo." });
         }
       }
 
-      // Reset form
       setNominal("");
       setDescription("");
       setReason("");
@@ -253,7 +234,6 @@ function TransaksiAdminContent() {
       }
       setPreviewUrl(null);
       setShowModal(false);
-      // Reset date to today
       const today = new Date().toISOString().split('T')[0];
       setTransactionDate(today);
     } catch (error: any) {
