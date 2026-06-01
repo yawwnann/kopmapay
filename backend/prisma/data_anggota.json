@@ -256,6 +256,10 @@
         "November": {
           "nominal": 10000,
           "tanggal_bayar": "15/07/2024"
+        },
+        "Desember": {
+          "nominal": 10000,
+          "tanggal_bayar": "02/12/2024"
         }
       },
       "2024": {
@@ -300,6 +304,10 @@
           "tanggal_bayar": "07/06/2025"
         },
         "November": {
+          "nominal": 10000,
+          "tanggal_bayar": "07/06/2025"
+        },
+        "Desember": {
           "nominal": 10000,
           "tanggal_bayar": "07/06/2025"
         }
@@ -3562,37 +3570,37 @@
     },
     "simpanan_sukarela": [
       {
-        "tanggal": "11/13/2020",
+        "tanggal": "13/11/2020",
         "nominal": 50000,
         "saldo": 50000
       },
       {
-        "tanggal": "12/10/2020",
+        "tanggal": "10/12/2020",
         "nominal": 50000,
         "saldo": 100000
       },
       {
-        "tanggal": "1/19/2021",
+        "tanggal": "19/01/2021",
         "nominal": 50000,
         "saldo": 150000
       },
       {
-        "tanggal": "3/13/2021",
+        "tanggal": "13/03/2021",
         "nominal": 50000,
         "saldo": 200000
       },
       {
-        "tanggal": "4/1/2021",
+        "tanggal": "01/04/2021",
         "nominal": 30000,
         "saldo": 230000
       },
       {
-        "tanggal": "5/27/2021",
+        "tanggal": "27/05/2021",
         "nominal": 50000,
         "saldo": 280000
       },
       {
-        "tanggal": "8/5/2021",
+        "tanggal": "05/08/2021",
         "nominal": 20000,
         "saldo": 300000
       },
@@ -3602,94 +3610,99 @@
         "saldo": 350000
       },
       {
-        "tanggal": "8/12/2021",
+        "tanggal": "12/08/2021",
         "nominal": 50000,
         "saldo": 400000
       },
       {
-        "tanggal": "3/3/2022",
+        "tanggal": "03/03/2022",
         "nominal": 50000,
         "saldo": 450000
       },
       {
-        "tanggal": "5/14/2022",
+        "tanggal": "14/05/2022",
         "nominal": 100000,
         "saldo": 550000
       },
       {
-        "tanggal": "11/10/2022",
+        "tanggal": "10/11/2022",
         "nominal": 100000,
         "saldo": 650000
       },
       {
-        "tanggal": "2/1/2023",
+        "tanggal": "01/02/2023",
         "nominal": 100000,
         "saldo": 750000
       },
       {
-        "tanggal": "12/7/2023",
+        "tanggal": "07/12/2023",
         "nominal": 100000,
         "saldo": 850000
       },
       {
-        "tanggal": "5/9/2023",
+        "tanggal": "09/05/2023",
         "nominal": 150000,
         "saldo": 1000000
       },
       {
-        "tanggal": "6/11/2023",
+        "tanggal": "11/06/2023",
         "nominal": 300000,
         "saldo": 1300000
       },
       {
-        "tanggal": "3/6/2024",
+        "tanggal": "06/03/2024",
         "nominal": 200000,
         "saldo": 1500000
       },
       {
-        "tanggal": "5/15/2024",
+        "tanggal": "15/05/2024",
         "nominal": 400000,
         "saldo": 1900000
       },
       {
-        "tanggal": "9/20/2024",
+        "tanggal": "20/09/2024",
         "nominal": 300000,
         "saldo": 2200000
       },
       {
-        "tanggal": "4/19/2025",
+        "tanggal": "19/04/2025",
         "nominal": 400000,
         "saldo": 2600000
       },
       {
-        "tanggal": "9/2/2025",
+        "tanggal": "02/09/2025",
         "nominal": 200000,
         "saldo": 2800000
       },
       {
         "tanggal": "10/12/2025",
-        "nominal": 100000,
-        "saldo": 2900000
+        "nominal": 200000,
+        "saldo": 3000000
       },
       {
-        "tanggal": "1/31/2026",
-        "nominal": 300000,
+        "tanggal": "31/01/2026",
+        "nominal": 200000,
         "saldo": 3200000
       },
       {
-        "tanggal": "2/3/2026",
-        "nominal": 332590,
-        "saldo": 3532590
+        "tanggal": "03/02/2026",
+        "nominal": 300000,
+        "saldo": 3500000
       },
       {
         "tanggal": "06/04/2026",
-        "nominal": 300000,
+        "nominal": 332590,
         "saldo": 3832590
       },
       {
         "tanggal": "22/05/2026",
         "nominal": 300000,
         "saldo": 4132590
+      },
+      {
+        "tanggal": "22/05/2026",
+        "nominal": 300000,
+        "saldo": 4432590
       }
     ]
   },
@@ -4317,6 +4330,10 @@
         "April": {
           "nominal": 5000,
           "tanggal_bayar": "28/04/2026"
+        },
+        "Mei": {
+          "nominal": 10000,
+          "tanggal_bayar": "23/05/2026"
         }
       },
       "2027": {},
@@ -4551,6 +4568,18 @@
         "April": {
           "nominal": 10000,
           "tanggal_bayar": "01/11/2025"
+        },
+        "Mei": {
+          "nominal": 10000,
+          "tanggal_bayar": "17/05/2026"
+        },
+        "Juni": {
+          "nominal": 10000,
+          "tanggal_bayar": "17/05/2026"
+        },
+        "Juli": {
+          "nominal": 10000,
+          "tanggal_bayar": "17/05/2026"
         }
       },
       "2027": {}
@@ -4560,6 +4589,11 @@
         "tanggal": "12/02/2026",
         "nominal": 10540,
         "saldo": 10540
+      },
+      {
+        "tanggal": "17/05/2026",
+        "nominal": 20000,
+        "saldo": 30540
       }
     ]
   },
@@ -6208,114 +6242,6 @@
     "simpanan_sukarela": []
   },
   {
-    "nama": "MALVINA MELIANA",
-    "nim": "2300011008",
-    "prodi": "Manajemen // Ekonomi dan Bisnis",
-    "no_hp": "8818591805",
-    "simpanan_wajib": {
-      "2023": {
-        "Oktober": {
-          "nominal": 10000,
-          "tanggal_bayar": "10/12/2023"
-        },
-        "November": {
-          "nominal": 10000,
-          "tanggal_bayar": "05/03/2224"
-        },
-        "Desember": {
-          "nominal": 10000,
-          "tanggal_bayar": "05/03/2225"
-        }
-      },
-      "2024": {
-        "Januari": {
-          "nominal": 10000,
-          "tanggal_bayar": "05/03/2024"
-        },
-        "Februari": {
-          "nominal": 10000,
-          "tanggal_bayar": "05/03/2024"
-        },
-        "Maret": {
-          "nominal": 10000,
-          "tanggal_bayar": "06/03/2024"
-        },
-        "April": {
-          "nominal": 10000,
-          "tanggal_bayar": "19/11/2024"
-        },
-        "Mei": {
-          "nominal": 10000,
-          "tanggal_bayar": "03/06/2025"
-        },
-        "Juni": {
-          "nominal": 10000,
-          "tanggal_bayar": "03/06/2025"
-        },
-        "Juli": {
-          "nominal": 10000,
-          "tanggal_bayar": "03/06/2025"
-        },
-        "Agustus": {
-          "nominal": 10000,
-          "tanggal_bayar": "03/06/2025"
-        },
-        "September": {
-          "nominal": 10000,
-          "tanggal_bayar": "03/06/2025"
-        },
-        "Oktober": {
-          "nominal": 10000,
-          "tanggal_bayar": "19/07/2025"
-        },
-        "November": {
-          "nominal": 10000,
-          "tanggal_bayar": "19/07/2025"
-        },
-        "Desember": {
-          "nominal": 10000,
-          "tanggal_bayar": "19/07/2025"
-        }
-      },
-      "2025": {
-        "Januari": {
-          "nominal": 10000,
-          "tanggal_bayar": "19/07/2025"
-        },
-        "Februari": {
-          "nominal": 10000,
-          "tanggal_bayar": "19/07/2025"
-        },
-        "Maret": {
-          "nominal": 10000,
-          "tanggal_bayar": "19/07/2025"
-        },
-        "April": {
-          "nominal": 10000,
-          "tanggal_bayar": "19/07/2025"
-        },
-        "Mei": {
-          "nominal": 10000,
-          "tanggal_bayar": "05/08/2025"
-        },
-        "Juni": {
-          "nominal": 10000,
-          "tanggal_bayar": "05/08/2025"
-        },
-        "Juli": {
-          "nominal": 10000,
-          "tanggal_bayar": "05/08/2025"
-        },
-        "Agustus": {
-          "nominal": 10000,
-          "tanggal_bayar": "05/08/2025"
-        }
-      },
-      "2026": {}
-    },
-    "simpanan_sukarela": []
-  },
-  {
     "nama": "Malvalena Anindya",
     "nim": "2400005074",
     "prodi": "PGSD",
@@ -6607,6 +6533,114 @@
         "saldo": 6148
       }
     ]
+  },
+  {
+    "nama": "MALVINA MELIANA",
+    "nim": "2300011008",
+    "prodi": "Manajemen // Ekonomi dan Bisnis",
+    "no_hp": "8818591805",
+    "simpanan_wajib": {
+      "2023": {
+        "Oktober": {
+          "nominal": 10000,
+          "tanggal_bayar": "10/12/2023"
+        },
+        "November": {
+          "nominal": 10000,
+          "tanggal_bayar": "05/03/2224"
+        },
+        "Desember": {
+          "nominal": 10000,
+          "tanggal_bayar": "05/03/2225"
+        }
+      },
+      "2024": {
+        "Januari": {
+          "nominal": 10000,
+          "tanggal_bayar": "05/03/2024"
+        },
+        "Februari": {
+          "nominal": 10000,
+          "tanggal_bayar": "05/03/2024"
+        },
+        "Maret": {
+          "nominal": 10000,
+          "tanggal_bayar": "06/03/2024"
+        },
+        "April": {
+          "nominal": 10000,
+          "tanggal_bayar": "19/11/2024"
+        },
+        "Mei": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/06/2025"
+        },
+        "Juni": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/06/2025"
+        },
+        "Juli": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/06/2025"
+        },
+        "Agustus": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/06/2025"
+        },
+        "September": {
+          "nominal": 10000,
+          "tanggal_bayar": "03/06/2025"
+        },
+        "Oktober": {
+          "nominal": 10000,
+          "tanggal_bayar": "19/07/2025"
+        },
+        "November": {
+          "nominal": 10000,
+          "tanggal_bayar": "19/07/2025"
+        },
+        "Desember": {
+          "nominal": 10000,
+          "tanggal_bayar": "19/07/2025"
+        }
+      },
+      "2025": {
+        "Januari": {
+          "nominal": 10000,
+          "tanggal_bayar": "19/07/2025"
+        },
+        "Februari": {
+          "nominal": 10000,
+          "tanggal_bayar": "19/07/2025"
+        },
+        "Maret": {
+          "nominal": 10000,
+          "tanggal_bayar": "19/07/2025"
+        },
+        "April": {
+          "nominal": 10000,
+          "tanggal_bayar": "19/07/2025"
+        },
+        "Mei": {
+          "nominal": 10000,
+          "tanggal_bayar": "05/08/2025"
+        },
+        "Juni": {
+          "nominal": 10000,
+          "tanggal_bayar": "05/08/2025"
+        },
+        "Juli": {
+          "nominal": 10000,
+          "tanggal_bayar": "05/08/2025"
+        },
+        "Agustus": {
+          "nominal": 10000,
+          "tanggal_bayar": "05/08/2025"
+        }
+      },
+      "2026": {}
+    },
+    "simpanan_sukarela": []
   },
   {
     "nama": "Meri aulia pratiwi",
@@ -10795,6 +10829,10 @@
         "Mei": {
           "nominal": 10000,
           "tanggal_bayar": "09/02/2026"
+        },
+        "Juni": {
+          "nominal": 10000,
+          "tanggal_bayar": "22/05/2026"
         }
       },
       "2027": {},
