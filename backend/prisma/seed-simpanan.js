@@ -129,9 +129,15 @@ async function main() {
     );
     matched++;
 
-    // ── 3a. Proses Simpanan Wajib ──────────────────────────
+    // ── 3b. Proses Simpanan Pokok ───────────────────────────
+    const pokok = parseInt(anggota.simpanan_pokok, 10) || 0;
+
+    // ── 3c. Proses Simpanan Wajib ──────────────────────────
     const wajib = anggota.simpanan_wajib || {};
     
+    // Hapus data simpanan pokok lama agar tidak ada duplikasi jika dijalankan ulang
+    await prisma.payment.deleteMany({ where: { userId: user.id, description: 'Simpanan Pokok' } });
+
     // Hapus data simpanan wajib lama agar tidak ada duplikasi jika dijalankan ulang
     await prisma.mandatorySaving.deleteMany({ where: { userId: user.id } });
     await prisma.payment.deleteMany({ where: { userId: user.id, description: 'Simpanan Wajib' } });
