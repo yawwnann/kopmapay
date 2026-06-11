@@ -120,7 +120,17 @@ export class AdminTransactionsService {
             paymentId: newPayment.id,
           },
         });
-      } else if (!desc.includes('pokok')) {
+      } else if (desc.includes('pokok')) {
+        // Pokok saving - track as voluntary saving for breakdown tracking
+        await tx.voluntarySaving.create({
+          data: {
+            userId: dto.userId,
+            nominal: new Prisma.Decimal(dto.nominal),
+            paymentId: newPayment.id,
+            createdAt: transactionDate,
+          },
+        });
+      } else {
         // Voluntary saving (not pokok and not wajib)
         await tx.voluntarySaving.create({
           data: {
