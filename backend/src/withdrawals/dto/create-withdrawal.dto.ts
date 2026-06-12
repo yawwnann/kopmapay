@@ -4,6 +4,7 @@ import {
   IsString,
   IsEnum,
   IsOptional,
+  IsIn,
 } from 'class-validator';
 
 export enum WithdrawalPaymentMethod {
@@ -30,7 +31,7 @@ export class CreateWithdrawalDto {
   @IsNotEmpty()
   savingType: SavingType;
 
-  @IsEnum(WithdrawalPaymentMethod)
+  @IsIn(['Cash', 'BankTransfer', 'Bank Transfer'])
   @IsOptional()
-  paymentMethod?: WithdrawalPaymentMethod;
+  paymentMethod?: string;
 }

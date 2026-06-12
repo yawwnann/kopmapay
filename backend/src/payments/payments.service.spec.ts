@@ -88,20 +88,13 @@ describe('PaymentsService', () => {
           fc.double({ min: 0.01, max: 1000000, noNaN: true }),
           fc.string({ minLength: 1, maxLength: 200 }),
           fc.uuid(),
-          fc.uuid(),
-          async (paymentMethod, nominal, description, userId, paymentId) => {
-            // Setup: Create payment DTO
-            const createPaymentDto: CreatePaymentDto = {
-              nominal,
-              description,
-              paymentMethod,
-            };
-
+          async (paymentMethod, nominal, description, userId) => {
             const proofImage = 'https://example.com/proof.jpg';
+            const createdId = '00000000-0000-1000-8000-000000000001';
 
             // Mock the payment creation response
             const createdPayment = {
-              id: paymentId,
+              id: createdId,
               userId,
               nominal,
               proofImage,
@@ -119,8 +112,25 @@ describe('PaymentsService', () => {
               },
             };
 
-            mockPrismaService.payment.create.mockResolvedValue(createdPayment);
+            // Setup: Create payment DTO
+            const createPaymentDto: CreatePaymentDto = {
+              nominal,
+              description,
+              paymentMethod,
+            };
+
+            // Mock prisma calls
+            mockPrismaService.payment.create.mockReturnValue(createdPayment);
             mockPrismaService.user.findMany.mockResolvedValue([]);
+            mockPrismaService.payment.findUnique.mockReturnValue({
+              ...createdPayment,
+              user: {
+                id: userId,
+                name: 'Test User',
+                email: 'test@example.com',
+                angkatan: '2020',
+              },
+            });
 
             // Act: Create the payment
             const createdResult = await service.create(
@@ -129,23 +139,8 @@ describe('PaymentsService', () => {
               proofImage,
             );
 
-            // Mock the payment retrieval response
-            const retrievedPayment = {
-              ...createdPayment,
-              user: {
-                id: userId,
-                name: 'Test User',
-                email: 'test@example.com',
-                angkatan: '2020',
-              },
-            };
-
-            mockPrismaService.payment.findUnique.mockResolvedValue(
-              retrievedPayment,
-            );
-
-            // Act: Retrieve the payment
-            const retrievedResult = await service.findOne(paymentId);
+            // Act: Retrieve the payment using the actual created ID
+            const retrievedResult = await service.findOne(createdResult.id, userId, 'ANGGOTA');
 
             // Assert: Payment method should be preserved in the round-trip
             expect(createdResult.paymentMethod).toBe(paymentMethod);

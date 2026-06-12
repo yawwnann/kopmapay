@@ -1,5 +1,5 @@
 import {
-  IsEnum,
+  IsIn,
   IsNotEmpty,
   IsNumber,
   IsOptional,
@@ -15,7 +15,7 @@ export class CreatePaymentDto {
   @IsOptional()
   description?: string;
 
-  @IsEnum(['Cash', 'QRIS', 'BankTransfer'])
+  @IsIn(['Cash', 'QRIS', 'BankTransfer', 'Bank Transfer'])
   @IsNotEmpty()
   paymentMethod: string;
 }

@@ -1,5 +1,6 @@
 import {
   IsEnum,
+  IsIn,
   IsNotEmpty,
   IsNumber,
   IsOptional,
@@ -42,9 +43,9 @@ export class AdminCreateIncomeDto {
   @IsOptional()
   description?: string;
 
-  @IsEnum(PaymentMethod)
+  @IsIn(['Cash', 'QRIS', 'BankTransfer', 'Bank Transfer'])
   @IsNotEmpty()
-  paymentMethod: PaymentMethod;
+  paymentMethod: string;
 
   @IsDateString()
   @IsOptional()
@@ -71,9 +72,9 @@ export class AdminCreateWithdrawalDto {
   @IsNotEmpty()
   savingType: SavingType;
 
-  @IsEnum(WithdrawalPaymentMethod)
+  @IsIn(['Cash', 'BankTransfer', 'Bank Transfer'])
   @IsOptional()
-  paymentMethod?: WithdrawalPaymentMethod;
+  paymentMethod?: string;
 
   @IsDateString()
   @IsOptional()
