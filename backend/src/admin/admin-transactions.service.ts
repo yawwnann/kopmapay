@@ -60,7 +60,7 @@ export class AdminTransactionsService {
           nominal: new Prisma.Decimal(dto.nominal),
           proofImage: proofImageUrl || '/uploads/proofs/admin-direct-deposit.png',
           description: dto.description || 'Admin deposit',
-          paymentMethod: normalizePaymentMethod(dto.paymentMethod),
+          paymentMethod: normalizePaymentMethod(dto.paymentMethod) as any,
           status: 'APPROVED',
           verifiedBy: adminId,
           verifiedAt: transactionDate,
@@ -75,7 +75,7 @@ export class AdminTransactionsService {
             },
           },
         },
-      });
+      }) as any;
 
       // Update user's savings
       await tx.saving.upsert({

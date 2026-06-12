@@ -112,7 +112,9 @@ export class WithdrawalsService {
         nominal: new Prisma.Decimal(createWithdrawalDto.nominal),
         reason: createWithdrawalDto.reason,
         savingType: createWithdrawalDto.savingType,
-        paymentMethod: normalizePaymentMethod(createWithdrawalDto.paymentMethod),
+        paymentMethod: normalizePaymentMethod(
+          createWithdrawalDto.paymentMethod,
+        ) as any,
         status: 'PENDING',
       },
       include: {
@@ -124,7 +126,7 @@ export class WithdrawalsService {
           },
         },
       },
-    });
+    }) as any;
 
     // Notify Admins via WebSocket
     this.notificationsGateway.broadcastNewWithdrawal({
@@ -448,7 +450,7 @@ export class WithdrawalsService {
         nominal: new Prisma.Decimal(totalAmount),
         reason: fullReason,
         savingType: 'Semua' as any,
-        paymentMethod: normalizePaymentMethod(paymentMethod),
+        paymentMethod: normalizePaymentMethod(paymentMethod) as any,
         status: 'PENDING',
       },
       include: {
@@ -456,7 +458,7 @@ export class WithdrawalsService {
           select: { id: true, name: true, email: true },
         },
       },
-    });
+    }) as any;
 
     // Notify Admins
     this.notificationsGateway.broadcastNewWithdrawal({

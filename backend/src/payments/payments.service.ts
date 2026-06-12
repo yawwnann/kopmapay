@@ -32,7 +32,9 @@ export class PaymentsService {
         nominal: new Prisma.Decimal(createPaymentDto.nominal),
         proofImage,
         description: createPaymentDto.description,
-        paymentMethod: normalizePaymentMethod(createPaymentDto.paymentMethod),
+        paymentMethod: normalizePaymentMethod(
+          createPaymentDto.paymentMethod,
+        ) as any,
         status: 'PENDING',
       },
       include: {
@@ -44,7 +46,7 @@ export class PaymentsService {
           },
         },
       },
-    });
+    }) as any;
 
     // Send notification to admins via WebSocket
     this.notificationsGateway.broadcastNewPayment({
