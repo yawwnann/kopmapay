@@ -89,6 +89,7 @@ async function main() {
         prodi: a.prodi || null,
         phone: a.no_hp || null,
         fakultas: a.fakultas || null,
+        angkatan: a.angkatan ? String(a.angkatan) : null,
         isActive: true,
       },
     });
