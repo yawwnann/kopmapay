@@ -10,6 +10,7 @@ import { ApprovePaymentDto } from './dto/approve-payment.dto';
 import { EmailService } from '../email/email.service';
 import { NotificationsGateway } from '../notifications/notifications.gateway';
 import { NotificationsService } from '../notifications/notifications.service';
+import { normalizePaymentMethod } from '../common/utils/payment-method.util';
 
 @Injectable()
 export class PaymentsService {
@@ -31,7 +32,7 @@ export class PaymentsService {
         nominal: new Prisma.Decimal(createPaymentDto.nominal),
         proofImage,
         description: createPaymentDto.description,
-        paymentMethod: createPaymentDto.paymentMethod as any,
+        paymentMethod: normalizePaymentMethod(createPaymentDto.paymentMethod),
         status: 'PENDING',
       },
       include: {

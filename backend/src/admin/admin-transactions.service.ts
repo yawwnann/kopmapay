@@ -12,6 +12,7 @@ import {
 import { NotificationsGateway } from '../notifications/notifications.gateway';
 import { NotificationsService } from '../notifications/notifications.service';
 import { EmailService } from '../email/email.service';
+import { normalizePaymentMethod } from '../common/utils/payment-method.util';
 
 @Injectable()
 export class AdminTransactionsService {
@@ -59,7 +60,7 @@ export class AdminTransactionsService {
           nominal: new Prisma.Decimal(dto.nominal),
           proofImage: proofImageUrl || '/uploads/proofs/admin-direct-deposit.png',
           description: dto.description || 'Admin deposit',
-          paymentMethod: dto.paymentMethod as any,
+          paymentMethod: normalizePaymentMethod(dto.paymentMethod),
           status: 'APPROVED',
           verifiedBy: adminId,
           verifiedAt: transactionDate,

@@ -10,6 +10,7 @@ import { ApproveWithdrawalDto } from './dto/approve-withdrawal.dto';
 import { EmailService } from '../email/email.service';
 import { NotificationsGateway } from '../notifications/notifications.gateway';
 import { NotificationsService } from '../notifications/notifications.service';
+import { normalizePaymentMethod } from '../common/utils/payment-method.util';
 
 @Injectable()
 export class WithdrawalsService {
@@ -111,7 +112,7 @@ export class WithdrawalsService {
         nominal: new Prisma.Decimal(createWithdrawalDto.nominal),
         reason: createWithdrawalDto.reason,
         savingType: createWithdrawalDto.savingType,
-        paymentMethod: (createWithdrawalDto.paymentMethod || 'Cash') as any,
+        paymentMethod: normalizePaymentMethod(createWithdrawalDto.paymentMethod),
         status: 'PENDING',
       },
       include: {
@@ -447,7 +448,7 @@ export class WithdrawalsService {
         nominal: new Prisma.Decimal(totalAmount),
         reason: fullReason,
         savingType: 'Semua' as any,
-        paymentMethod: (paymentMethod || 'Cash') as any,
+        paymentMethod: normalizePaymentMethod(paymentMethod),
         status: 'PENDING',
       },
       include: {
