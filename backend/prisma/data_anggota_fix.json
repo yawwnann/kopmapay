@@ -2,7 +2,7 @@
   {
     "nama": "ALIFATUL CHASANAH",
     "nim": "2300012080",
-    "prodi": "AKUNTANSI",
+    "prodi": "Akuntansi",
     "no_hp": "87824411524",
     "simpanan_wajib": {
       "2024": {
@@ -83,12 +83,13 @@
         "saldo": 9223
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "ALLYA JYHAN",
     "nim": "2300011139",
-    "prodi": "Manajemen/ekonomi dan bisnis",
+    "prodi": "Manajemen",
     "no_hp": "82325600648",
     "simpanan_wajib": {
       "2024": {
@@ -141,12 +142,13 @@
         "saldo": 6148
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "ANANDA NURHALIZA PUTRI FAISAL",
     "nim": "2300012081",
-    "prodi": "AKUNTANSI",
+    "prodi": "Akuntansi",
     "no_hp": "81382595928",
     "simpanan_wajib": {
       "2024": {
@@ -243,7 +245,8 @@
         "saldo": 10979
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "ANIK PRIASIH",
@@ -362,12 +365,13 @@
         "saldo": 12736
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "AYU FADILA",
     "nim": "2400011056",
-    "prodi": "MANAJEMEN",
+    "prodi": "Manajemen",
     "no_hp": "83867463182",
     "simpanan_wajib": {
       "2024": {
@@ -455,12 +459,13 @@
       "2027": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Abdul Muhyi Nasution",
     "nim": "2300011087",
-    "prodi": "Manajemen fakultas ekonomi dan bisnis",
+    "prodi": "Manajemen",
     "no_hp": "82180938796",
     "simpanan_wajib": {
       "2023": {
@@ -566,12 +571,13 @@
         "saldo": 11858
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Adam Firmansyah",
     "nim": "2400001002",
-    "prodi": "Bimbingan konseling",
+    "prodi": "Bimbingan dan Konseling",
     "no_hp": "89672172070",
     "simpanan_wajib": {
       "2024": {
@@ -646,12 +652,13 @@
         "saldo": 23885
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Keguruan dan Ilmu Pendidikan"
   },
   {
     "nama": "Adhisti Edelyea putry",
     "nim": "2300011292",
-    "prodi": "manajemen",
+    "prodi": "Manajemen",
     "no_hp": "",
     "simpanan_wajib": {
       "2023": {
@@ -794,12 +801,13 @@
         "saldo": 220495
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Adityo Hary Prabowo",
     "nim": "2300030141",
-    "prodi": "ilmu komunikasi, fsbk",
+    "prodi": "Ilmu Komunikasi",
     "no_hp": "81226304515",
     "simpanan_wajib": {
       "2024": {
@@ -836,12 +844,13 @@
         "saldo": 4391
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Sastra, Budaya, dan Komunikasi"
   },
   {
     "nama": "Ahmad Bukhari",
     "nim": "2500031021",
-    "prodi": "FAI/Pendidikan Agama Islam",
+    "prodi": "Pendidikan Agama Islam",
     "no_hp": "085757579212",
     "simpanan_wajib": {
       "2025": {
@@ -876,12 +885,13 @@
       "2028": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Agama Islam"
   },
   {
     "nama": "Ahmad Egy Laudi",
     "nim": "2500011036",
-    "prodi": "FEB/Manajemen",
+    "prodi": "Manajemen",
     "no_hp": "085824617317",
     "simpanan_wajib": {
       "2025": {
@@ -909,7 +919,8 @@
         "saldo": 10941
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Ahmad Fauzan Wida",
@@ -1082,7 +1093,8 @@
         "saldo": 19320
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Ahmad Firdhan",
@@ -1115,7 +1127,8 @@
         "saldo": 6570
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Akhmal Mulya Hermansyah",
@@ -1238,7 +1251,8 @@
         "saldo": 60816
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Albina Ul Islam",
@@ -1316,7 +1330,8 @@
         "saldo": 12694
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Almaas Shofi H.",
@@ -1354,12 +1369,13 @@
         "saldo": 12256
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Alya Qotrun Nada",
     "nim": "2200011018",
-    "prodi": "Manajemen fakultas Ekonomi dan Bisnis",
+    "prodi": "Manajemen",
     "no_hp": "87711259728",
     "simpanan_wajib": {
       "2023": {
@@ -1485,7 +1501,8 @@
         "saldo": 100000
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Amelia agya putri",
@@ -1563,7 +1580,8 @@
         "saldo": 8344
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Andre Dwinata",
@@ -1613,12 +1631,13 @@
         "saldo": 9193
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Anggun Indriani",
     "nim": "2500016047",
-    "prodi": "SISTEM INFORMASI",
+    "prodi": "Sistem Informasi",
     "no_hp": "085769490815",
     "simpanan_wajib": {
       "2026": {
@@ -1636,12 +1655,13 @@
       "2029": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Sains dan Teknologi Terapan"
   },
   {
     "nama": "Anindita Sabrina Rahmadianti",
     "nim": "2200011386",
-    "prodi": "Manajemen (FEB)",
+    "prodi": "Manajemen",
     "no_hp": "85243246574",
     "simpanan_wajib": {
       "2023": {
@@ -1763,12 +1783,13 @@
         "saldo": 43986
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Annisa Nur Salsabila",
     "nim": "2500070012",
-    "prodi": "FEB/Bisnis Jasa Makanan",
+    "prodi": "Bisnis Jasa Makanan",
     "no_hp": "081278407915",
     "simpanan_wajib": {
       "2025": {
@@ -1822,7 +1843,8 @@
         "saldo": 16858
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Anwid Nurul Haq",
@@ -1909,12 +1931,13 @@
         "saldo": 17094
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Aprilia Azmi Nismara",
     "nim": "2400070016",
-    "prodi": "Bisnis Jasa Makanan/Fakultas Ekonomi dan Bisnis",
+    "prodi": "Bisnis Jasa Makanan",
     "no_hp": "85877776104",
     "simpanan_wajib": {
       "2024": {
@@ -1975,12 +1998,13 @@
         "saldo": 7027
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Arizka Murbaningrum",
     "nim": "24000111",
-    "prodi": "FEB/Manajemen",
+    "prodi": "Manajemen",
     "no_hp": "081545375387",
     "simpanan_wajib": {
       "2025": {
@@ -2030,12 +2054,13 @@
         "saldo": 46780
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Arnina Puspa Arum",
     "nim": "2300011426",
-    "prodi": "Manajemen/FEB",
+    "prodi": "Manajemen",
     "no_hp": "82144039363",
     "simpanan_wajib": {
       "2024": {
@@ -2084,12 +2109,13 @@
         "saldo": 5709
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Asyifa Saimona",
     "nim": "2300011270",
-    "prodi": "Prodi Manajemen, Fakultas Ekonomi dan Bisnis",
+    "prodi": "Manajemen",
     "no_hp": "89618616030",
     "simpanan_wajib": {
       "2023": {
@@ -2216,12 +2242,13 @@
         "saldo": 24561
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Asyifa' Cahya Ramadhani",
     "nim": "2500070003",
-    "prodi": "FEB/Bisnis Jasa Makanan",
+    "prodi": "Bisnis Jasa Makanan",
     "no_hp": "082220128473",
     "simpanan_wajib": {
       "2025": {
@@ -2278,12 +2305,13 @@
         "saldo": 23398
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Atta Nur Afilillah",
     "nim": "2500011105",
-    "prodi": "FEB/Manajemen",
+    "prodi": "Manajemen",
     "no_hp": "085891538172",
     "simpanan_wajib": {
       "2025": {
@@ -2316,12 +2344,13 @@
         "saldo": 9193
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Aulia Sifa Apriani",
     "nim": "2400012054",
-    "prodi": "Akuntansi/FEB",
+    "prodi": "Akuntansi",
     "no_hp": "8895165482",
     "simpanan_wajib": {
       "2024": {
@@ -2419,12 +2448,13 @@
         "saldo": 14902
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Aura Asti Alvina",
     "nim": "2400013345",
-    "prodi": "Psikologi/Psikologi",
+    "prodi": "Psikologi",
     "no_hp": "088216746171",
     "simpanan_wajib": {
       "2025": {
@@ -2477,7 +2507,8 @@
         "saldo": 4276
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Psikologi"
   },
   {
     "nama": "Azzahra Putri Rahmawati",
@@ -2539,12 +2570,13 @@
         "saldo": 19278
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Berlina Kafurinsani",
     "nim": "2400026059",
-    "prodi": "FSBK/Sastra Inggris",
+    "prodi": "Sastra Inggris",
     "no_hp": "085849092212",
     "simpanan_wajib": {
       "2026": {
@@ -2558,12 +2590,13 @@
       "2029": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Sastra, Budaya, dan Komunikasi"
   },
   {
     "nama": "Cipto Pradana",
     "nim": "22000012091",
-    "prodi": "Akuntansi Fakultas Ekonomi dan Bisnis",
+    "prodi": "Akuntansi",
     "no_hp": "81271044997",
     "simpanan_wajib": {
       "2023": {
@@ -2686,12 +2719,13 @@
         "saldo": 70660
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Dandi Saputra",
     "nim": "2400025034",
-    "prodi": "FSBK/ Sastra Indonesia",
+    "prodi": "Sastra Indonesia",
     "no_hp": "082282319073",
     "simpanan_wajib": {
       "2026": {
@@ -2705,12 +2739,13 @@
       "2029": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Sastra, Budaya, dan Komunikasi"
   },
   {
     "nama": "Dede Widiya Pramana Putra",
     "nim": "2400024051",
-    "prodi": "hukum",
+    "prodi": "Ilmu Hukum",
     "no_hp": "82323252078",
     "simpanan_wajib": {
       "2024": {
@@ -2763,12 +2798,13 @@
         "saldo": 6148
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Hukum"
   },
   {
     "nama": "Dessen Karunia Ananda",
     "nim": "2500028006",
-    "prodi": "FAI/BSA",
+    "prodi": "Bahasa dan Sastra Arab",
     "no_hp": "081364872424",
     "simpanan_wajib": {
       "2026": {
@@ -2782,12 +2818,13 @@
       "2029": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Agama Islam"
   },
   {
     "nama": "Destya Samanta",
     "nim": "2300011433",
-    "prodi": "Manajemen/FEB",
+    "prodi": "Manajemen",
     "no_hp": "895383413494",
     "simpanan_wajib": {
       "2023": {
@@ -2930,12 +2967,13 @@
         "saldo": 11419
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Dwi lara zulita",
     "nim": "2400011126",
-    "prodi": "Manajemen /FEB",
+    "prodi": "Manajemen",
     "no_hp": "81234176215",
     "simpanan_wajib": {
       "2024": {
@@ -3029,12 +3067,13 @@
         "saldo": 7466
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "ELVA AULYA",
     "nim": "2200012061",
-    "prodi": "AKUNTANSI",
+    "prodi": "Akuntansi",
     "no_hp": "82359129885",
     "simpanan_wajib": {
       "2024": {
@@ -3127,7 +3166,8 @@
         "saldo": 17077
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Efi Junita",
@@ -3205,7 +3245,8 @@
         "saldo": 8344
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Enlin Chandra",
@@ -3279,12 +3320,13 @@
         "saldo": 82695
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Psikologi"
   },
   {
     "nama": "Erica Selviana Putri",
     "nim": "2500016048",
-    "prodi": "Sistem Informatika",
+    "prodi": "Sistem Informasi",
     "no_hp": "085709485811",
     "simpanan_wajib": {
       "2026": {
@@ -3308,7 +3350,8 @@
         "saldo": 5000
       }
     ],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Sains dan Teknologi Terapan"
   },
   {
     "nama": "Evita Dwi Sri Rejeki",
@@ -3748,12 +3791,13 @@
         "saldo": 4432590
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "FRANSISKA NINDHAFIANA",
     "nim": "2300011136",
-    "prodi": "MANAJEMEN",
+    "prodi": "Manajemen",
     "no_hp": "",
     "simpanan_wajib": {
       "2024": {
@@ -3814,12 +3858,13 @@
         "saldo": 7027
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Fadia Rahma Aulia",
     "nim": "2300011303",
-    "prodi": "Manajemen, FEB",
+    "prodi": "Manajemen",
     "no_hp": "82288975321",
     "simpanan_wajib": {
       "2023": {
@@ -3941,12 +3986,13 @@
         "saldo": 13615
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Fadiyah Nisrina Devi",
     "nim": "2200011423",
-    "prodi": "Manajemen/FEB",
+    "prodi": "Manajemen",
     "no_hp": "8998572314",
     "simpanan_wajib": {
       "2023": {
@@ -4108,12 +4154,13 @@
         "saldo": 3602
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Faizah Putri Rahayu",
     "nim": "2500005064",
-    "prodi": "FKIP/ PGSD",
+    "prodi": "PGSD",
     "no_hp": "081266385255",
     "simpanan_wajib": {
       "2026": {
@@ -4127,7 +4174,8 @@
       "2029": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Keguruan dan Ilmu Pendidikan"
   },
   {
     "nama": "Farah maela sinta",
@@ -4242,12 +4290,13 @@
         "saldo": 12297
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "FIRDHA ALIFIA PRAYESTI",
     "nim": "2500011202",
-    "prodi": "FEB/Manajamen",
+    "prodi": "Manajemen",
     "no_hp": "081996732015",
     "simpanan_wajib": {
       "2025": {
@@ -4267,12 +4316,13 @@
         "saldo": 7880
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "GHAIDAH SALSABILA",
     "nim": "2300012104",
-    "prodi": "AKUNTANSI",
+    "prodi": "Akuntansi",
     "no_hp": "85730691694",
     "simpanan_wajib": {
       "2024": {
@@ -4365,7 +4415,8 @@
         "saldo": 5000
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Ghifari Achmad Syafiq",
@@ -4392,12 +4443,13 @@
       "2029": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Hafidz Afrizal",
     "nim": "2300035017",
-    "prodi": "PVTO, FKIP",
+    "prodi": "Pendidikan Vokasional Teknik Elektronika",
     "no_hp": "82280801425",
     "simpanan_wajib": {
       "2023": {
@@ -4507,12 +4559,13 @@
         "saldo": 12297
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Keguruan dan Ilmu Pendidikan"
   },
   {
     "nama": "Halimah",
     "nim": "2500016050",
-    "prodi": "FAST/ Sistem Informasi",
+    "prodi": "Sistem Informasi",
     "no_hp": "082125281636",
     "simpanan_wajib": {
       "2026": {
@@ -4534,12 +4587,13 @@
       "2029": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Sains dan Teknologi Terapan"
   },
   {
     "nama": "Hanin Adna Radhiyya",
     "nim": "2400070018",
-    "prodi": "Bisma",
+    "prodi": "Bisnis Jasa Makanan",
     "no_hp": "82322282880",
     "simpanan_wajib": {
       "2024": {
@@ -4650,12 +4704,13 @@
         "saldo": 30540
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Hulyatul Atqiya Shafwah",
     "nim": "2500029066",
-    "prodi": "FKM/Kesehatan Masyarakat",
+    "prodi": "Kesehatan Masyarakat",
     "no_hp": "085717494108",
     "simpanan_wajib": {
       "2025": {
@@ -4669,12 +4724,13 @@
       "2028": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Kesehatan Masyarakat"
   },
   {
     "nama": "INTAN MIFTACHUL PANGESTI",
     "nim": "2300012083",
-    "prodi": "AKUNTANSI",
+    "prodi": "Akuntansi",
     "no_hp": "81392058339",
     "simpanan_wajib": {
       "2024": {
@@ -4771,12 +4827,13 @@
         "saldo": 10979
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Intan permatasari",
     "nim": "2400012069",
-    "prodi": "Akuntansi/Ekonomi dan Bisnis",
+    "prodi": "Akuntansi",
     "no_hp": "85781022324",
     "simpanan_wajib": {
       "2024": {
@@ -4829,12 +4886,13 @@
         "saldo": 6148
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Janan Afifah",
     "nim": "",
-    "prodi": "",
+    "prodi": "Pendidikan Matematika",
     "no_hp": "",
     "simpanan_wajib": {
       "2020": {
@@ -5086,12 +5144,13 @@
         "saldo": 28978
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Keguruan dan Ilmu Pendidikan"
   },
   {
     "nama": "Jenifer Octaviana Belo",
     "nim": "2414011269",
-    "prodi": "MANAJEMEN",
+    "prodi": "Manajemen",
     "no_hp": "082227015862",
     "simpanan_wajib": {
       "2026": {
@@ -5109,12 +5168,13 @@
       "2029": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "KANESTRI RISTIRA TSABITAH",
     "nim": "2300011055",
-    "prodi": "Manajemen, FEB",
+    "prodi": "Manajemen",
     "no_hp": "8112616505",
     "simpanan_wajib": {
       "2023": {
@@ -5241,12 +5301,13 @@
         "saldo": 24561
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Keysia Suryandari",
     "nim": "2200011269",
-    "prodi": "Manajemen/ Fakultas Ekonomi dan Bisnis",
+    "prodi": "Manajemen",
     "no_hp": "895381483014",
     "simpanan_wajib": {
       "2023": {
@@ -5408,12 +5469,13 @@
         "saldo": 86275
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Lensa Anggun Pitaloka",
     "nim": "2300011158",
-    "prodi": "Manajemen/FEB",
+    "prodi": "Manajemen",
     "no_hp": "85709294462",
     "simpanan_wajib": {
       "2024": {
@@ -5544,12 +5606,13 @@
         "saldo": 7466
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Lintang Zahra Fadhilla",
     "nim": "2300011141",
-    "prodi": "Prodi Manajemen Fakultas Ekonomi dan Bisnis",
+    "prodi": "Manajemen",
     "no_hp": "81229207084",
     "simpanan_wajib": {
       "2023": {
@@ -5695,12 +5758,13 @@
         "saldo": 35946
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Loulanda Hanti Izna Dhuha",
     "nim": "2300011321",
-    "prodi": "Manajemen-FEB",
+    "prodi": "Manajemen",
     "no_hp": "82317192357",
     "simpanan_wajib": {
       "2023": {
@@ -5816,12 +5880,13 @@
       "2026": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Lutfia Nur Rahmah",
     "nim": "",
-    "prodi": "",
+    "prodi": "Matematika",
     "no_hp": "",
     "simpanan_wajib": {
       "2019": {
@@ -6190,7 +6255,8 @@
         "saldo": 2113561
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Keguruan dan Ilmu Pendidikan"
   },
   {
     "nama": "M Rizky Fadhilah",
@@ -6239,12 +6305,13 @@
         "saldo": 6144
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "M. Rafly Hanan Surgawi",
     "nim": "2400030152",
-    "prodi": "FSBK/ Ilmu Komunikasi",
+    "prodi": "Ilmu Komunikasi",
     "no_hp": "08978543750",
     "simpanan_wajib": {
       "2025": {
@@ -6289,7 +6356,8 @@
         "saldo": 11380
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Sastra, Budaya, dan Komunikasi"
   },
   {
     "nama": "M. Ridho Putra Mahendra",
@@ -6308,7 +6376,8 @@
       "2029": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Malvalena Anindya",
@@ -6366,12 +6435,13 @@
         "saldo": 12297
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Keguruan dan Ilmu Pendidikan"
   },
   {
     "nama": "Mar Atus Sholikhah",
     "nim": "2300010066",
-    "prodi": "Ekonomi Pembangunan/Ekonomi dan Bisnis",
+    "prodi": "Ekonomi Pembangunan",
     "no_hp": "85972712954",
     "simpanan_wajib": {
       "2023": {
@@ -6461,12 +6531,13 @@
         "saldo": 44371
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Maulana Rizziq Hambali",
     "nim": "2500028008",
-    "prodi": "FAI/bahasa dan sastra arab",
+    "prodi": "Bahasa dan Sastra Arab",
     "no_hp": "081213656686",
     "simpanan_wajib": {
       "2025": {
@@ -6519,7 +6590,8 @@
         "saldo": 12694
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Agama Islam"
   },
   {
     "nama": "Maulida Widirahayu",
@@ -6548,12 +6620,13 @@
         "saldo": 10941
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Agama Islam"
   },
   {
     "nama": "Maylan Hafizah",
     "nim": "2400012041",
-    "prodi": "Akuntansi/ FEB",
+    "prodi": "Akuntansi",
     "no_hp": "87771825071",
     "simpanan_wajib": {
       "2024": {
@@ -6606,12 +6679,13 @@
         "saldo": 6148
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "MALVINA MELIANA",
     "nim": "2300011008",
-    "prodi": "Manajemen // Ekonomi dan Bisnis",
+    "prodi": "Manajemen",
     "no_hp": "8818591805",
     "simpanan_wajib": {
       "2023": {
@@ -6715,12 +6789,13 @@
       "2026": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Meri aulia pratiwi",
     "nim": "2400012042",
-    "prodi": "Akuntansi/Ekonomi dan Bisnis",
+    "prodi": "Akuntansi",
     "no_hp": "83861817833",
     "simpanan_wajib": {
       "2024": {
@@ -6777,12 +6852,13 @@
         "saldo": 6587
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Miladiyah Nurni Hayati",
     "nim": "2300030045",
-    "prodi": "Sastra budaya dan komunikasi prodi ilmu komunikasi",
+    "prodi": "Ilmu Komunikasi",
     "no_hp": "81346650493",
     "simpanan_wajib": {
       "2023": {
@@ -6900,7 +6976,8 @@
         "saldo": 13175
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Sastra, Budaya, dan Komunikasi"
   },
   {
     "nama": "Muhamad Faizal",
@@ -7181,12 +7258,13 @@
         "saldo": 30739
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Keguruan dan Ilmu Pendidikan"
   },
   {
     "nama": "Muhammad Fakhri Shodiq",
     "nim": "2500004028",
-    "prodi": "FKIP/Pendidikan Bahasa Inggris",
+    "prodi": "Pendidikan Bahasa Inggris",
     "no_hp": "081216812343",
     "simpanan_wajib": {
       "2026": {
@@ -7200,12 +7278,13 @@
       "2029": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Keguruan dan Ilmu Pendidikan"
   },
   {
     "nama": "Mutia Nurmalasari",
     "nim": "2400011169",
-    "prodi": "MANAJEMEN",
+    "prodi": "Manajemen",
     "no_hp": "087838284122",
     "simpanan_wajib": {
       "2026": {
@@ -7229,12 +7308,13 @@
         "saldo": 5000
       }
     ],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Nabila Sintia Zahrani",
     "nim": "2400001082",
-    "prodi": "Bimbingan Konseling/FKIP",
+    "prodi": "Bimbingan dan Konseling",
     "no_hp": "89526082689",
     "simpanan_wajib": {
       "2024": {
@@ -7287,12 +7367,13 @@
         "saldo": 6148
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Keguruan dan Ilmu Pendidikan"
   },
   {
     "nama": "Nabilah Auliya Cahyaningtias",
     "nim": "2300070003",
-    "prodi": "Bisnis Jasa Makanan/Fakultas Ekononi Bisnis",
+    "prodi": "Bisnis Jasa Makanan",
     "no_hp": "89514149174",
     "simpanan_wajib": {
       "2023": {
@@ -7426,12 +7507,13 @@
         "saldo": 14932
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Nadhira Camtarena",
     "nim": "2300010050",
-    "prodi": "Prodi Ekonomi Pembangunan, Fakultas Ekonomi dan Bisnis",
+    "prodi": "Ekonomi Pembangunan",
     "no_hp": "85795895565",
     "simpanan_wajib": {
       "2023": {
@@ -7533,12 +7615,13 @@
         "saldo": 11419
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Nadia Nur Fitriyani",
     "nim": "2315012108",
-    "prodi": "Akuntansi/Ekonomi dan Bisnis",
+    "prodi": "Akuntansi",
     "no_hp": "85640417498",
     "simpanan_wajib": {
       "2023": {
@@ -7663,12 +7746,13 @@
       }
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Naima Farah Amada",
     "nim": "2400011252",
-    "prodi": "FEB/ manajemen",
+    "prodi": "Manajemen",
     "no_hp": "083838577030",
     "simpanan_wajib": {
       "2026": {
@@ -7692,12 +7776,13 @@
         "saldo": 5000
       }
     ],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Naufal Agung Kurniawan",
     "nim": "2200011429",
-    "prodi": "Manajemen/FEB",
+    "prodi": "Manajemen",
     "no_hp": "81325228185",
     "simpanan_wajib": {
       "2023": {
@@ -7823,12 +7908,13 @@
         "saldo": 14054
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Nazwa Zaskia Anggrea Putri",
     "nim": "2400011179",
-    "prodi": "manajemen",
+    "prodi": "Manajemen",
     "no_hp": "81377782910",
     "simpanan_wajib": {
       "2024": {
@@ -7927,12 +8013,13 @@
         "saldo": 36461
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Nesya Putri Maghfiroh",
     "nim": "2311010019",
-    "prodi": "Ekonomi Pembangunan - Ekonomi dan Bisnis",
+    "prodi": "Ekonomi Pembangunan",
     "no_hp": "82225132416",
     "simpanan_wajib": {
       "2023": {
@@ -8050,12 +8137,13 @@
         "saldo": 13175
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Nia Puspita Sari",
     "nim": "2400011289",
-    "prodi": "Manajemen/Ekonomi dan Bisnis",
+    "prodi": "Manajemen",
     "no_hp": "85269643075",
     "simpanan_wajib": {
       "2024": {
@@ -8173,12 +8261,13 @@
         "saldo": 1837540
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Nihal",
     "nim": "2300011377",
-    "prodi": "Manajemen / Ekonomi dan Bisnis",
+    "prodi": "Manajemen",
     "no_hp": "82114809367",
     "simpanan_wajib": {
       "2024": {
@@ -8251,12 +8340,13 @@
         "saldo": 8344
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Niken Heningtyas Utami",
     "nim": "2200011103",
-    "prodi": "Manajemen dan Fakultas Ekonomi dan Bisnis",
+    "prodi": "Manajemen",
     "no_hp": "85727122143",
     "simpanan_wajib": {
       "2023": {
@@ -8382,12 +8472,13 @@
         "saldo": 14054
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Nina Aulia",
     "nim": "2400012057",
-    "prodi": "Akuntansi/FEB",
+    "prodi": "Akuntansi",
     "no_hp": "82111449172",
     "simpanan_wajib": {
       "2024": {
@@ -8489,12 +8580,13 @@
         "saldo": 14902
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Nirmala Jelita Pravitasari",
     "nim": "2300011170",
-    "prodi": "Manajemen Fakultas ekonomi dan bisnis",
+    "prodi": "Manajemen",
     "no_hp": "85244318259",
     "simpanan_wajib": {
       "2023": {
@@ -8624,7 +8716,8 @@
         "saldo": 50608
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Nisrina Putri Hadining Kana",
@@ -8687,12 +8780,13 @@
         "saldo": 28040
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Nita Sindi Fahkaningrum",
     "nim": "2200032043",
-    "prodi": "Perbankan syariah/FAI",
+    "prodi": "Perbankan Syariah",
     "no_hp": "81393758170",
     "simpanan_wajib": {
       "2022": {
@@ -8856,7 +8950,8 @@
         "saldo": 18007
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Agama Islam"
   },
   {
     "nama": "Novia anggreiny",
@@ -8910,12 +9005,13 @@
         "saldo": 11380
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Novita Winda Wulandari",
     "nim": "2300032044",
-    "prodi": "Perbankan Syariah, fakultas Agama Islam",
+    "prodi": "Perbankan Syariah",
     "no_hp": "85281827648",
     "simpanan_wajib": {
       "2023": {
@@ -9068,12 +9164,13 @@
         "saldo": 252972
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Agama Islam"
   },
   {
     "nama": "Nurul Hidayah",
     "nim": "2500028038",
-    "prodi": "FAI/Bahasa dan Sastra Arab",
+    "prodi": "Bahasa dan Sastra Arab",
     "no_hp": "0895417600111",
     "simpanan_wajib": {
       "2025": {
@@ -9097,12 +9194,13 @@
         "saldo": 10067
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Agama Islam"
   },
   {
     "nama": "Ozha Razaldy",
     "nim": "2200011242",
-    "prodi": "Manajemen/FEB",
+    "prodi": "Manajemen",
     "no_hp": "83831677249",
     "simpanan_wajib": {
       "2023": {
@@ -9222,12 +9320,13 @@
       "2026": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Putra Jaya Pratama",
     "nim": "2300011286",
-    "prodi": "Manajemen (FEB)",
+    "prodi": "Manajemen",
     "no_hp": "895414953432",
     "simpanan_wajib": {
       "2023": {
@@ -9333,7 +9432,8 @@
         "saldo": 33029
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Putri nabila salma",
@@ -9390,12 +9490,13 @@
         "saldo": 8771
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Qori Shahwa Adzkiya",
     "nim": "2400036150",
-    "prodi": "gizi/kesehatan masyarakat",
+    "prodi": "Gizi",
     "no_hp": "8562662696",
     "simpanan_wajib": {
       "2024": {
@@ -9448,12 +9549,13 @@
         "saldo": 6148
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Kesehatan Masyarakat"
   },
   {
     "nama": "RINI NOVIA",
     "nim": "2300011431",
-    "prodi": "MANAJEMEN",
+    "prodi": "Manajemen",
     "no_hp": "85742474308",
     "simpanan_wajib": {
       "2024": {
@@ -9544,12 +9646,13 @@
       "2027": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "RIZKY MAULANA",
     "nim": "2300011195",
-    "prodi": "Manajemen - FEB",
+    "prodi": "Manajemen",
     "no_hp": "0821-5535-4353",
     "simpanan_wajib": {
       "2023": {
@@ -9737,12 +9840,13 @@
         "saldo": 3500
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Raditha Dwi Oktaviana",
     "nim": "2500016042",
-    "prodi": "Sains dan Teknologi Terapan",
+    "prodi": "Sistem Informasi",
     "no_hp": "082229201578",
     "simpanan_wajib": {
       "2026": {
@@ -9760,12 +9864,13 @@
       "2029": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Sains dan Teknologi Terapan"
   },
   {
     "nama": "Rahma Shofa",
     "nim": "2400001083",
-    "prodi": "FKIP Bimbingan Konseling",
+    "prodi": "Bimbingan dan Konseling",
     "no_hp": "85888358189",
     "simpanan_wajib": {
       "2024": {
@@ -9838,12 +9943,13 @@
         "saldo": 8344
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Keguruan dan Ilmu Pendidikan"
   },
   {
     "nama": "Raissa Ardelia Putri",
     "nim": "2300011280",
-    "prodi": "Manajemen, FEB",
+    "prodi": "Manajemen",
     "no_hp": "81809443660",
     "simpanan_wajib": {
       "2023": {
@@ -9949,7 +10055,8 @@
         "saldo": 60293
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Ratna Dewinta",
@@ -9982,12 +10089,13 @@
         "saldo": 4882
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Psikologi"
   },
   {
     "nama": "Regita Pramesti",
     "nim": "2400012051",
-    "prodi": "Akuntansi/FEB",
+    "prodi": "Akuntansi",
     "no_hp": "82279905258",
     "simpanan_wajib": {
       "2024": {
@@ -10081,12 +10189,13 @@
         "saldo": 14463
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Rieka Manda Cahya",
     "nim": "2400036163",
-    "prodi": "Gizi/Kesehatan Masyarakat",
+    "prodi": "Gizi",
     "no_hp": "82342066975",
     "simpanan_wajib": {
       "2024": {
@@ -10163,7 +10272,8 @@
         "saldo": 8783
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Kesehatan Masyarakat"
   },
   {
     "nama": "Rita Ermawati",
@@ -10274,12 +10384,13 @@
         "saldo": 112126
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Rizal agus setiawan",
     "nim": "2415070025",
-    "prodi": "bisnis jasa makanan",
+    "prodi": "Bisnis Jasa Makanan",
     "no_hp": "81390101590",
     "simpanan_wajib": {
       "2024": {
@@ -10342,7 +10453,8 @@
       "2027": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Rohima Tulsyadia  Br Tumorang",
@@ -10375,7 +10487,8 @@
         "saldo": 5000
       }
     ],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Romizah rifdah",
@@ -10478,12 +10591,13 @@
         "saldo": 10967
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "SITI NUR AZIZA",
     "nim": "230001270",
-    "prodi": "",
+    "prodi": "Akuntansi",
     "no_hp": "",
     "simpanan_wajib": {
       "2023": {
@@ -10597,12 +10711,13 @@
         "saldo": 12736
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "SYAHERA MILANIE SAFITRI",
     "nim": "2300011398",
-    "prodi": "MANAJEMEN",
+    "prodi": "Manajemen",
     "no_hp": "85724877875",
     "simpanan_wajib": {
       "2024": {
@@ -10699,12 +10814,13 @@
         "saldo": 5000
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Salma Dwi Rahmawati",
     "nim": "2500011100",
-    "prodi": "FEB/Manajemen",
+    "prodi": "Manajemen",
     "no_hp": "82383338511",
     "simpanan_wajib": {
       "2025": {
@@ -10728,12 +10844,13 @@
         "saldo": 3074
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Salma Nur Amalia",
     "nim": "2300036028",
-    "prodi": "Gizi/ Fakultas Kesehatan Masyarakat",
+    "prodi": "Gizi",
     "no_hp": "83838532013",
     "simpanan_wajib": {
       "2023": {
@@ -10877,7 +10994,8 @@
         "saldo": 81367
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Kesehatan Masyarakat"
   },
   {
     "nama": "Salsabila Arafah",
@@ -10963,7 +11081,8 @@
         "saldo": 42864
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Salsabila Maura Aji",
@@ -11062,7 +11181,8 @@
         "saldo": 9212
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Kesehatan Masyarakat"
   },
   {
     "nama": "Salsabila Nadya Eka Maharani",
@@ -11161,7 +11281,8 @@
         "saldo": 31256
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Salsabila Nandiya putri",
@@ -11209,12 +11330,13 @@
       "2027": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Sazra yoane yasmine",
     "nim": "2400011093",
-    "prodi": "",
+    "prodi": "Manajemen",
     "no_hp": "083831004093",
     "simpanan_wajib": {
       "2025": {
@@ -11266,12 +11388,13 @@
         "saldo": 7022
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Sefiawati",
     "nim": "2300011161",
-    "prodi": "Manajeman/Feb",
+    "prodi": "Manajemen",
     "no_hp": "83161619724",
     "simpanan_wajib": {
       "2024": {
@@ -11358,12 +11481,13 @@
         "saldo": 23218
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Septuri Widu Atpabel",
     "nim": "2500016051",
-    "prodi": "FAST/Sistem Informasi",
+    "prodi": "Sistem Informasi",
     "no_hp": "082373337355",
     "simpanan_wajib": {
       "2026": {
@@ -11381,7 +11505,8 @@
       "2029": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 10000
+    "simpanan_pokok": 10000,
+    "fakultas": "Fakultas Sains dan Teknologi Terapan"
   },
   {
     "nama": "Siti Syifa’iyah",
@@ -11410,7 +11535,8 @@
         "saldo": 15000
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Psikologi"
   },
   {
     "nama": "Siti istiqomah",
@@ -11496,12 +11622,13 @@
         "saldo": 16203
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "SURYA Aditya Pangestu",
     "nim": "2200011078",
-    "prodi": "FEB/MANAJEMEN",
+    "prodi": "Manajemen",
     "no_hp": "85248129064",
     "simpanan_wajib": {
       "2022": {
@@ -11667,12 +11794,13 @@
       "2026": {}
     },
     "simpanan_sukarela": [],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Tania Az Zahra",
     "nim": "2500004032",
-    "prodi": "FKIP/pend.bahasa inggris",
+    "prodi": "Pendidikan Bahasa Inggris",
     "no_hp": "088232356895",
     "simpanan_wajib": {
       "2025": {
@@ -11709,12 +11837,13 @@
         "saldo": 4383
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Keguruan dan Ilmu Pendidikan"
   },
   {
     "nama": "Tata Nur Alifah",
     "nim": "1800033040",
-    "prodi": "Tekpang",
+    "prodi": "Teknologi Pangan",
     "no_hp": "",
     "simpanan_wajib": {
       "2018": {
@@ -12130,12 +12259,13 @@
         "saldo": 76521
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Teknologi Industri"
   },
   {
     "nama": "Tazkiya Faizati",
     "nim": "2400029008",
-    "prodi": "Gizi / Fakultas kesehatan Masyarakat",
+    "prodi": "Gizi",
     "no_hp": "8568311947",
     "simpanan_wajib": {
       "2024": {
@@ -12229,7 +12359,8 @@
         "saldo": 8783
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Kesehatan Masyarakat"
   },
   {
     "nama": "Tiara Wijaya Mukti",
@@ -12254,7 +12385,8 @@
         "saldo": 4383
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Kesehatan Masyarakat"
   },
   {
     "nama": "Tri Novita Sari",
@@ -12324,12 +12456,13 @@
         "saldo": 7466
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Veronika",
     "nim": "2300011108",
-    "prodi": "Prodi Manajemen/ Fakultas Ekonomi dan Bisnis",
+    "prodi": "Manajemen",
     "no_hp": "87869931272",
     "simpanan_wajib": {
       "2023": {
@@ -12431,12 +12564,13 @@
         "saldo": 11419
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "WINDI ANDINI",
     "nim": "230001099",
-    "prodi": "AKUNTANSI",
+    "prodi": "Akuntansi",
     "no_hp": "85771528879",
     "simpanan_wajib": {
       "2024": {
@@ -12546,7 +12680,8 @@
         "saldo": 35000
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Waryani",
@@ -12618,12 +12753,13 @@
         "saldo": 10941
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Woro Nilam Nabila Djati",
     "nim": "2300011367",
-    "prodi": "Manajemen/Ekonomi dan Bisnis",
+    "prodi": "Manajemen",
     "no_hp": "85212551974",
     "simpanan_wajib": {
       "2023": {
@@ -12786,7 +12922,8 @@
         "saldo": 208
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Wulan Irma Suciati",
@@ -12811,12 +12948,13 @@
         "saldo": 2635
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Psikologi"
   },
   {
     "nama": "Ya Uma Dina Pangestuti",
     "nim": "2300011137",
-    "prodi": "manajemen",
+    "prodi": "Manajemen",
     "no_hp": "",
     "simpanan_wajib": {
       "2024": {
@@ -12910,12 +13048,13 @@
         "saldo": 81855
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Zahra Fitriana",
     "nim": "2200011418",
-    "prodi": "manajemen FEB",
+    "prodi": "Manajemen",
     "no_hp": "87738927632",
     "simpanan_wajib": {
       "2023": {
@@ -13037,12 +13176,13 @@
         "saldo": 17972
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "Zotaufiq Azhar",
     "nim": "2400030161",
-    "prodi": "fsbk/ilkom",
+    "prodi": "Ilmu Komunikasi",
     "no_hp": "085198012512",
     "simpanan_wajib": {
       "2025": {
@@ -13066,12 +13206,13 @@
         "saldo": 22524
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Sastra, Budaya, dan Komunikasi"
   },
   {
     "nama": "Saiful Bahri",
     "nim": "2200011086",
-    "prodi": "Manajemen/Ekonomi dan Bisnis",
+    "prodi": "Manajemen",
     "no_hp": "81352009972",
     "simpanan_wajib": {
       "2022": {
@@ -13231,12 +13372,13 @@
         "saldo": 23686
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   },
   {
     "nama": "sheilla adelia a",
     "nim": "2400011202",
-    "prodi": "manajemen/ekonomi dan bisnis",
+    "prodi": "Manajemen",
     "no_hp": "81390516268",
     "simpanan_wajib": {
       "2024": {
@@ -13313,6 +13455,7 @@
         "saldo": 19693
       }
     ],
-    "simpanan_pokok": 50000
+    "simpanan_pokok": 50000,
+    "fakultas": "Fakultas Ekonomi dan Bisnis"
   }
 ]
