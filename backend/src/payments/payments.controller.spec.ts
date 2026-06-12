@@ -67,7 +67,7 @@ describe('PaymentsController', () => {
         paymentMethod: 'Cash',
       };
 
-      const mockUrl = '/uploads/proofs/test-uuid.jpg';
+      const mockUrl = '/uploads/proofs/test-uuid.webp';
 
       const mockPayment = {
         id: 'payment-123',
@@ -116,7 +116,7 @@ describe('PaymentsController', () => {
         paymentMethod: 'QRIS',
       };
 
-      const mockUrl = '/uploads/proofs/test-uuid.jpg';
+      const mockUrl = '/uploads/proofs/test-uuid.webp';
 
       mockStorageService.saveFile.mockResolvedValue(mockUrl);
       mockPaymentsService.create.mockResolvedValue({
@@ -141,7 +141,7 @@ describe('PaymentsController', () => {
         paymentMethod: 'BankTransfer',
       };
 
-      const mockUrl = '/uploads/proofs/test-uuid.jpg';
+      const mockUrl = '/uploads/proofs/test-uuid.webp';
 
       mockStorageService.saveFile.mockResolvedValue(mockUrl);
       mockPaymentsService.create.mockResolvedValue({

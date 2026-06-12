@@ -3,6 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import * as path from 'path';
 import * as fs from 'fs/promises';
 import { v4 as uuidv4 } from 'uuid';
+import sharp from 'sharp';
 import type { Express } from 'express';
 
 @Injectable()
@@ -35,6 +36,17 @@ export class StorageService {
     }
   }
 
+  private async compressToWebP(buffer: Buffer): Promise<Buffer> {
+    try {
+      return await sharp(buffer).webp({ quality: 80 }).toBuffer();
+    } catch (err) {
+      this.logger.error('WebP compression failed', err);
+      throw new BadRequestException(
+        'Failed to compress image. Please try a different image.',
+      );
+    }
+  }
+
   async saveFile(
     file: Express.Multer.File,
     subdir: string = 'general',
@@ -49,18 +61,21 @@ export class StorageService {
       );
     }
 
-    if (file.size > this.maxFileSize) {
-      throw new BadRequestException('File size must not exceed 5MB');
+    const compressedBuffer = await this.compressToWebP(file.buffer);
+
+    if (compressedBuffer.length > this.maxFileSize) {
+      throw new BadRequestException(
+        'Compressed file still exceeds 5MB. Please use a smaller image.',
+      );
     }
 
-    const ext = path.extname(file.originalname) || '.jpg';
-    const filename = `${uuidv4()}${ext}`;
+    const filename = `${uuidv4()}.webp`;
     const targetDir = path.join(this.uploadPath, subdir);
 
     await this.ensureDir(targetDir);
 
     const fullPath = path.join(targetDir, filename);
-    await fs.writeFile(fullPath, file.buffer);
+    await fs.writeFile(fullPath, compressedBuffer);
 
     return `/uploads/${subdir}/${filename}`;
   }
