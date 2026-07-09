@@ -129,6 +129,12 @@ export function ProfileTab() {
     const file = e.target.files?.[0];
     if (!file) return;
 
+    if (file.size > 2 * 1024 * 1024) {
+      setMessage({ type: "error", text: "Ukuran foto maksimal 2 MB." });
+      e.target.value = "";
+      return;
+    }
+
     const reader = new FileReader();
     reader.onload = () => {
       setImageSrc(reader.result as string);
@@ -308,6 +314,7 @@ export function ProfileTab() {
             >
               {user?.role === "ADMIN" ? "Administrator" : "Anggota"}
             </span>
+            <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">Maksimal ukuran foto 2 MB</p>
           </div>
         </div>
 

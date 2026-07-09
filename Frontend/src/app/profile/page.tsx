@@ -213,6 +213,11 @@ export default function ProfilePage() {
   const handlePhotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
+      if (file.size > 2 * 1024 * 1024) {
+        setMessage({ type: "error", text: "Ukuran foto maksimal 2 MB." });
+        e.target.value = "";
+        return;
+      }
       setPhotoFile(file);
       if (data) {
         setData({ ...data, photo: URL.createObjectURL(file) });
@@ -390,6 +395,10 @@ export default function ProfilePage() {
                   </label>
                 )}
               </div>
+              
+              {isEditing && (
+                <p className="mt-3 text-xs text-gray-500 dark:text-gray-400">Maksimal ukuran foto 2 MB</p>
+              )}
 
               {/* Name & Role */}
               <div className="mt-4 text-center">
