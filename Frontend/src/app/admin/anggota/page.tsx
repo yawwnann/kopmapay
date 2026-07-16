@@ -64,6 +64,8 @@ function AnggotaContent() {
   } | null>(null);
   const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [filterStatus, setFilterStatus] = useState<"ALL" | "ACTIVE" | "INACTIVE">("ALL");
+  const [sortBy, setSortBy] = useState<"NAME_ASC" | "NAME_DESC" | "ANGKATAN_DESC" | "ANGKATAN_ASC" | "">("");
   const [page, setPage] = useState(1);
   const itemsPerPage = 10;
 
@@ -355,17 +357,42 @@ function AnggotaContent() {
     setUserSavings(null);
   };
 
-  // Pagination & Filtering
-  const filteredMembers = members.filter((member) => {
-    if (!searchQuery) return true;
-    const lowerQuery = searchQuery.toLowerCase();
-    return (
-      member.name?.toLowerCase().includes(lowerQuery) ||
-      member.email?.toLowerCase().includes(lowerQuery) ||
-      member.nim?.toLowerCase().includes(lowerQuery) ||
-      member.phone?.toLowerCase().includes(lowerQuery) ||
-      member.angkatan?.toLowerCase().includes(lowerQuery)
-    );
+  // Pagination, Filtering & Sorting
+  let filteredMembers = members.filter((member) => {
+    // Filter Status
+    if (filterStatus === "ACTIVE" && !member.isActive) return false;
+    if (filterStatus === "INACTIVE" && member.isActive) return false;
+
+    // Search Query
+    if (searchQuery) {
+      const lowerQuery = searchQuery.toLowerCase();
+      const matchesSearch =
+        member.name?.toLowerCase().includes(lowerQuery) ||
+        member.email?.toLowerCase().includes(lowerQuery) ||
+        member.nim?.toLowerCase().includes(lowerQuery) ||
+        member.phone?.toLowerCase().includes(lowerQuery) ||
+        member.angkatan?.toLowerCase().includes(lowerQuery);
+      if (!matchesSearch) return false;
+    }
+
+    return true;
+  });
+
+  // Sorting
+  filteredMembers = [...filteredMembers].sort((a, b) => {
+    if (sortBy === "NAME_ASC") {
+      return (a.name || "").localeCompare(b.name || "");
+    }
+    if (sortBy === "NAME_DESC") {
+      return (b.name || "").localeCompare(a.name || "");
+    }
+    if (sortBy === "ANGKATAN_DESC") {
+      return parseInt(b.angkatan || "0") - parseInt(a.angkatan || "0");
+    }
+    if (sortBy === "ANGKATAN_ASC") {
+      return parseInt(a.angkatan || "0") - parseInt(b.angkatan || "0");
+    }
+    return 0;
   });
 
   const totalPages = Math.ceil(filteredMembers.length / itemsPerPage);
@@ -403,6 +430,32 @@ function AnggotaContent() {
           </p>
         </div>
         <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:items-center">
+          <select
+            value={filterStatus}
+            onChange={(e) => {
+              setFilterStatus(e.target.value as any);
+              setPage(1);
+            }}
+            className="dark:bg-form-input w-full rounded-lg border border-stroke bg-transparent py-2 px-4 outline-none focus:border-primary focus-visible:shadow-none dark:border-strokedark sm:w-auto"
+          >
+            <option value="ALL">Semua Status</option>
+            <option value="ACTIVE">Aktif</option>
+            <option value="INACTIVE">Nonaktif</option>
+          </select>
+          <select
+            value={sortBy}
+            onChange={(e) => {
+              setSortBy(e.target.value as any);
+              setPage(1);
+            }}
+            className="dark:bg-form-input w-full rounded-lg border border-stroke bg-transparent py-2 px-4 outline-none focus:border-primary focus-visible:shadow-none dark:border-strokedark sm:w-auto"
+          >
+            <option value="">Urutkan</option>
+            <option value="NAME_ASC">Nama (A-Z)</option>
+            <option value="NAME_DESC">Nama (Z-A)</option>
+            <option value="ANGKATAN_DESC">Angkatan (Terbaru)</option>
+            <option value="ANGKATAN_ASC">Angkatan (Terlama)</option>
+          </select>
           <div className="relative w-full sm:w-auto">
             <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
               <svg
