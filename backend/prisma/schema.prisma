@@ -90,11 +90,12 @@ model Payment {
   proofImage    String
   status        PaymentStatus @default(PENDING)
   description   String?
-  paymentMethod PaymentMethod @default(Cash)
-  verifiedBy    String?
-  verifiedAt    DateTime?
-  createdAt     DateTime      @default(now())
-  updatedAt     DateTime      @updatedAt
+  paymentMethod   PaymentMethod @default(Cash)
+  rejectionReason String?
+  verifiedBy      String?
+  verifiedAt      DateTime?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
 
   // Relations
   user             User              @relation(fields: [userId], references: [id], onDelete: Cascade)

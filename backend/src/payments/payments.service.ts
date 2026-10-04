@@ -191,6 +191,9 @@ export class PaymentsService {
             status: approvePaymentDto.status,
             verifiedBy: adminId,
             verifiedAt: new Date(),
+            ...(approvePaymentDto.rejectionReason && {
+              rejectionReason: approvePaymentDto.rejectionReason,
+            }),
           },
           include: {
             user: {
